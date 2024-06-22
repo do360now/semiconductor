@@ -15,3 +15,8 @@ up:
 deploy: build up
 
 # git remote add origin https://github.com/do360now/semiconductor.git
+
+git remote add origin git@github.com:do360now/semiconductor.git
+
+git remote set-url origin git@github.com:do360now/semiconductor.git
+
