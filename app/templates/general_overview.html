@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>{{content.title}}</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>{{content.title}}</h1>
+            <button class="exit-btn">Exit</button>
+        </div>
+        <div class="main-content">
+            <h2>{{content.title}}</h2>
+            <h3>Please Select from the Chapter List</h3>
+            <div class="menu-buttons">
+                <a href="/general_overview/introduction"><button>Introduction</button></a>
+                <a href="/general_overview/measurements"><button>Semiconductor Processing Measurements</button></a>
+                <a href="/general_overview/material"><button>Principles of Semiconductor Material</button></a>
+                <a href="/general_overview/fabrication"><button>Integrated Circuit Fabrication</button></a>
+                <a href="/general_overview/fundamentals"><button>Solid-state Device Fundamentals</button></a>
+            </div>
+            <div class="footer">
+                <a href="/"><button>Main Menu</button></a>
+                <button>Glossary</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    background-color: #d3d3d3;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar h1 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.exit-btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.main-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.main-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.main-content h3 {
+    margin-top: 0;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.content-text {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.done-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.done-btn:hover {
+    background-color: #45a049;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+.footer {
+    background-color: #d3d3d3;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.footer button:hover {
+    background-color: #e9e9e9;
+}
+
+.menu-buttons {
+    margin-bottom: 20px;
+}
+
+.menu-buttons a {
+    display: block;
+    margin: 10px auto;
+}
+
+.menu-buttons button {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.menu-buttons button:hover {
+    background-color: #e9e9e9;
+}
