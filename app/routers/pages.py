@@ -60,8 +60,49 @@ async def read_introduction(request: Request):
     template = templates.get_template('introduction.html')
     return template.render(request=request, content=content)
 
+
 @router.get("/general_overview/introduction/objectives", response_class=HTMLResponse)
 async def read_objectives(request: Request):
     content = await get_content("Objectives")
     template = templates.get_template('objectives.html')
     return template.render(request=request, content=content)
+
+@router.get("/general_overview/introduction/electricity_electronics", response_class=HTMLResponse)
+async def read_objectives(request: Request):
+    template = templates.get_template('electricity_electronics.html')
+    return template.render(request=request)
+
+@router.get("/general_overview/introduction/history_electronics", response_class=HTMLResponse)
+async def read_objectives(request: Request):
+    template = templates.get_template('history_electronics.html')
+    return template.render(request=request)
+
+@router.get("/general_overview/introduction/vacuum_tubes", response_class=HTMLResponse)
+async def read_objectives(request: Request):
+    template = templates.get_template('vacuum_tubes.html')
+    return template.render(request=request)
+
+@router.get("/general_overview/introduction/solid_state", response_class=HTMLResponse)
+async def read_objectives(request: Request):
+    template = templates.get_template('solid_state.html')
+    return template.render(request=request)
+
+@router.get("/general_overview/introduction/integrated_circuits", response_class=HTMLResponse)
+async def read_objectives(request: Request):
+    template = templates.get_template('integrated_circuits.html')
+    return template.render(request=request)
+
+@router.get("/general_overview/introduction/analog_and_digital", response_class=HTMLResponse)
+async def read_objectives(request: Request):
+    template = templates.get_template('analog_and_digital.html')
+    return template.render(request=request)
+
+@router.get("/general_overview/introduction/binary_counting", response_class=HTMLResponse)
+async def read_objectives(request: Request):
+    template = templates.get_template('binary_counting.html')
+    return template.render(request=request)
+
+@router.get("/general_overview/introduction/digital_logic", response_class=HTMLResponse)
+async def read_objectives(request: Request):
+    template = templates.get_template('digital_logic.html')
+    return template.render(request=request)

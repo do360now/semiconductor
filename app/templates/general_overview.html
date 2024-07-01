@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/styles.css">
-    <title>{{content.title}}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>{{ content.title }}</title>
+    
 </head>
 <body>
+    <div class="exit">
+        <button>Exit</button>
+    </div>
     <div class="container">
         <div class="sidebar">
-            <h1>{{content.title}}</h1>
-            <button class="exit-btn">Exit</button>
+            <h1>{{ content.title }}</h1>
         </div>
         <div class="main-content">
-            <h2>{{content.title}}</h2>
-            <h3>Please Select from the Chapter List</h3>
+            <h2>General Overview</h2>
+            <h3>Table of Contents</h3>
+            <h4>Please Select from the Chapter List</h4>
             <div class="menu-buttons">
                 <a href="/general_overview/introduction"><button>Introduction</button></a>
                 <a href="/general_overview/measurements"><button>Semiconductor Processing Measurements</button></a>

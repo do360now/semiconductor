@@ -4,30 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/styles.css">
-    <title>{{content.title}}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>{{ content.title }}</title>
+    
 </head>
 <body>
     <div class="container">
         <div class="sidebar">
-            <h1>{{content.title}}</h1>
-            <button class="exit-btn">Exit</button>
+            <h1>{{ content.title }}</h1>
         </div>
         <div class="main-content">
             <h2>Main Menu</h2>
             <div class="menu-buttons">
-                <a href="/course_overview"><button>{{content.menu[1]}}</button></a>
-                <a href="/general_overview"><button>{{content.menu[2]}}</button></a>
-                <a href="/technical_overview"><button>{{content.menu[3]}}</button></a>
+                <a href="/course_overview"><button>{{ content.menu[1] }}</button></a>
+                <a href="/general_overview"><button>{{ content.menu[2] }}</button></a>
+                <a href="/technical_overview"><button>{{ content.menu[3] }}</button></a>
             </div>
             
             <div class="image-container">
-                <img src="/images/{{content.image}}" alt="Semiconductor Processing Overview">
+                <img src="/images/{{ content.image }}" alt="Semiconductor Processing Overview">
             </div>
             
         </div>
         <div class="footer">
-            <button>{{content.footer[0]}}</button>
-            <button>{{content.footer[1]}}</button>
+            <button>{{ content.footer[0] }}</button>
+            <button>{{ content.footer[1] }}</button>
         </div>
     </div>
 </body>

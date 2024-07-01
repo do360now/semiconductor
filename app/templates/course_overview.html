@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/styles.css">
-    <title>{{content.title}}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>{{ content.title }}</title>
+    
 </head>
 <body>
     <div class="container">
         <div class="sidebar">
-            <h1>{{content.title}}</h1>
-            <button class="exit-btn">Exit</button>
+            <h1>{{ content.title }}</h1>
         </div>
         <div class="main-content">
-            <h2>{{content.title}} -</h2>
             <div class="content-text">
-                {{content.text}}
+                {{ content.text }}
             </div>
             <a href="/"><button class="done-btn">Done</button></a>
         </div>

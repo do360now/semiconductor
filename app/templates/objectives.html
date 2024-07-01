@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/styles.css">
-    <title>{{content.title}}</title>
+    <title>{{ content.title }}</title>
+    
 </head>
 <body>
     <div class="container">
         <div class="sidebar">
-            <h1>{{content.title}}</h1>
-            <button class="exit-btn">Exit</button>
+            <h1>{{ content.title }}</h1>
         </div>
         <div class="main-content">
-            <h2>{{content.title}}</h2>
+            <h2><p>At the end of this section, the student will be able to:</p></h2>
             <div class="content-text">
-                {{content.text}}
+                <ul>
+                    <li>Identify three stages in the history of electronics.</li>
+                    <li>Identify four stages in the development of integrated circuits.</li>
+                    <li>Identify three advantages of integrated circuits over discrete components.</li>
+                    <li>Identify two types of IC devices that are currently in use.</li>
+                    <li>Identify typical applications of semiconductor devices.</li>
+                </ul>
             </div>
             <div class="footer">
                 <a href="/general_overview/introduction"><button>INDEX</button></a>

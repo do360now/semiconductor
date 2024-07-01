@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Binary Counting</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #d3d3d3; /* Light grey background */
+            color: #333;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 900px;
+            margin: auto;
+            background: #e6e6e6; /* Light grey background for container */
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            border: 2px solid #ccc; /* Border for the container */
+            overflow: hidden;
+        }
+
+        .sidebar {
+            background-color: #a9a9a9; /* Dark grey color for high-tech look */
+            color: white;
+            padding: 20px;
+            border-right: 2px solid #ccc;
+            text-align: center;
+            font-weight: bold;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 20px;
+        }
+
+        .main-content {
+            background-color: #ffffff;
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .content-text {
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .content-text h1 {
+            color: #8b0000; /* Dark red for heading */
+            font-size: 24px;
+        }
+
+        .content-text strong {
+            color: #8b0000; /* Dark red for strong text */
+        }
+
+        .counter-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .counter {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .counter input {
+            width: 40px;
+            height: 30px;
+            font-size: 16px;
+            text-align: center;
+            margin-left: 10px;
+        }
+
+        .binary-display {
+            font-size: 24px;
+            font-weight: bold;
+            color: green;
+            margin: 10px 0;
+        }
+
+        .switches {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .switch {
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
+            background-color: red;
+            border: 2px solid #a9a9a9;
+            border-radius: 5px;
+        }
+
+        .switch.on {
+            background-color: green;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer button {
+            margin: 5px;
+            background-color: #dcdcdc; /* Light grey buttons */
+            color: black;
+            border: 2px solid #a9a9a9; /* Dark grey border */
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .footer button:hover {
+            background-color: #b0c4de; /* Light blue on hover */
+        }
+
+        .footer .page-number {
+            font-size: 14px;
+        }
+
+        .exit {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .exit button {
+            background-color: #dcdcdc; /* Light grey button */
+            color: black;
+            border: 2px solid #a9a9a9; /* Dark grey border */
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .exit button:hover {
+            background-color: #b0c4de; /* Light blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="exit">
+        <button>Exit</button>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            INTRODUCTION
+        </div>
+        <div class="main-content">
+            <div class="content-text">
+                <h1>Binary Counting</h1>
+                <p>Digital electronic devices use a special system of counting called the "Binary System". Numbers in the binary system are represented by a series of ones and zeros. Electronic devices use digital components to store and manipulate numbers. Using eight bits (binary digits) a binary counter can count from 0 to 255.</p>
+            </div>
+            <div class="counter-container">
+                <div class="counter">
+                    <label for="binary-input">Pick a number</label>
+                    <input type="number" id="binary-input" min="0" max="255" value="10">
+                </div>
+                <div class="binary-display" id="binary-display">00001010</div>
+                <div class="switches" id="switches">
+                    <div class="switch"></div>
+                    <div class="switch"></div>
+                    <div class="switch on"></div>
+                    <div class="switch"></div>
+                    <div class="switch on"></div>
+                    <div class="switch"></div>
+                    <div class="switch"></div>
+                    <div class="switch"></div>
+                </div>
+                <p>The colored squares represent digital switches. If a switch is red it is off, if it is green it is on.</p>
+            </div>
+            <div class="footer">
+                <a href="/general_overview"><button>INDEX</button></a>
+                <button>Glossary</button>
+                <div class="page-number">Page 9 of 15</div>
+                <button>&#9664;</button>
+                <button>&#9654;</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('binary-input').addEventListener('input', function() {
+            let number = parseInt(this.value, 10);
+            let binaryString = number.toString(2).padStart(8, '0');
+            document.getElementById('binary-display').textContent = binaryString;
+            let switches = document.getElementById('switches').children;
+            for (let i = 0; i < switches.length; i++) {
+                switches[i].classList.remove('on');
+                if (binaryString[i] === '1') {
+                    switches[i].classList.add('on');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

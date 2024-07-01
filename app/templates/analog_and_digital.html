@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Analog & Digital</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #d3d3d3; /* Light grey background */
+            color: #333;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 900px;
+            margin: auto;
+            background: #e6e6e6; /* Light grey background for container */
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            border: 2px solid #ccc; /* Border for the container */
+            overflow: hidden;
+        }
+
+        .sidebar {
+            background-color: #a9a9a9; /* Dark grey color for high-tech look */
+            color: white;
+            padding: 20px;
+            border-right: 2px solid #ccc;
+            text-align: center;
+            font-weight: bold;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 20px;
+        }
+
+        .main-content {
+            background-color: #ffffff;
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .content-text {
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .content-text h1 {
+            color: #8b0000; /* Dark red for heading */
+            font-size: 24px;
+        }
+
+        .content-text strong {
+            color: #8b0000; /* Dark red for strong text */
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            background-color: #dcdcdc; /* Light grey button */
+            color: black;
+            border: 2px solid #a9a9a9; /* Dark grey border */
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .button-container button:hover {
+            background-color: #b0c4de; /* Light blue on hover */
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer button {
+            margin: 5px;
+            background-color: #dcdcdc; /* Light grey buttons */
+            color: black;
+            border: 2px solid #a9a9a9; /* Dark grey border */
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .footer button:hover {
+            background-color: #b0c4de; /* Light blue on hover */
+        }
+
+        .footer .page-number {
+            font-size: 14px;
+        }
+
+        .exit {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .exit button {
+            background-color: #dcdcdc; /* Light grey button */
+            color: black;
+            border: 2px solid #a9a9a9; /* Dark grey border */
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .exit button:hover {
+            background-color: #b0c4de; /* Light blue on hover */
+        }
+
+        .mode-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .mode-buttons button {
+            margin: 0 10px;
+            padding: 5px 10px;
+            background-color: #f0f0f0;
+            border: 2px solid #a9a9a9;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .mode-buttons button.active {
+            background-color: #dcdcdc;
+        }
+
+        .mode-buttons button:hover {
+            background-color: #b0c4de;
+        }
+
+        .mode-text {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .switches {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .switch {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            margin: 0 5px;
+            background-color: #fff;
+            border: 2px solid #a9a9a9;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .switch.active {
+            background-color: #dcdcdc;
+        }
+
+        .switch:hover {
+            background-color: #b0c4de;
+        }
+    </style>
+</head>
+<body>
+    <div class="exit">
+        <button>Exit</button>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            INTRODUCTION
+        </div>
+        <div class="main-content">
+            <div class="content-text">
+                <h1>Analog & Digital</h1>
+                <p>Electronic devices may be classified as either analog or digital. Components that operate in analog mode are able to produce <strong>continuous changes between set limits</strong>. Digital components are restricted to <strong>discrete changes between limits</strong>.</p>
+                <p>An everyday example of an analog component is a dimmer switch for a light. The light may be off, on, or any place in-between. A digital light switch provides only preset levels from off to on.</p>
+            </div>
+            <div class="image-container">
+                <img src="/static/images/analog_digital.png" alt="Analog and Digital">
+            </div>
+            <div class="mode-buttons">
+                <button class="active">Analog</button>
+                <button>Digital</button>
+            </div>
+            <div class="mode-text">Operating in Digital Mode</div>
+            <div class="switches">
+                <div class="switch">OFF</div>
+                <div class="switch">1</div>
+                <div class="switch">2</div>
+                <div class="switch">3</div>
+                <div class="switch">ON</div>
+            </div>
+            <div class="footer">
+                <a href="/general_overview"><button>INDEX</button></a>
+                <button>Glossary</button>
+                <div class="page-number">Page 8 of 15</div>
+                <button>&#9664;</button>
+                <button>&#9654;</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

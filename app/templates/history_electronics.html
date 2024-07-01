@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>History of Electronics</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #d3d3d3; /* Light grey background */
+            color: #333;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 900px;
+            margin: auto;
+            background: #e6e6e6; /* Light grey background for container */
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            border: 2px solid #ccc; /* Border for the container */
+            overflow: hidden;
+        }
+
+        .sidebar {
+            background-color: #a9a9a9; /* Dark grey color for high-tech look */
+            color: white;
+            padding: 20px;
+            border-right: 2px solid #ccc;
+            text-align: center;
+            font-weight: bold;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 20px;
+        }
+
+        .main-content {
+            background-color: #ffffff;
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .content-text {
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .content-text h1 {
+            color: #8b0000; /* Dark red for heading */
+            font-size: 24px;
+        }
+
+        .content-text strong {
+            color: #8b0000; /* Dark red for strong text */
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer button {
+            margin: 5px;
+            background-color: #dcdcdc; /* Light grey buttons */
+            color: black;
+            border: 2px solid #a9a9a9; /* Dark grey border */
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .footer button:hover {
+            background-color: #b0c4de; /* Light blue on hover */
+        }
+
+        .footer .page-number {
+            font-size: 14px;
+        }
+
+        .exit {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .exit button {
+            background-color: #dcdcdc; /* Light grey button */
+            color: black;
+            border: 2px solid #a9a9a9; /* Dark grey border */
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .exit button:hover {
+            background-color: #b0c4de; /* Light blue on hover */
+        }
+
+        .timeline-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .timeline-container img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+        }
+
+        .timeline {
+            position: relative;
+            width: 200px;
+            margin: 20px auto;
+        }
+
+        .timeline-line {
+            width: 5px;
+            height: 200px;
+            background: black;
+            margin: 0 auto;
+        }
+
+        .timeline-point {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: blue;
+            border-radius: 50%;
+        }
+
+        .timeline-point p {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        .timeline-point .top {
+            top: 0;
+        }
+
+        .timeline-point .bottom {
+            bottom: 0;
+        }
+
+        .timeline-point .text {
+            position: absolute;
+            width: 100px;
+            left: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="exit">
+        <button>Exit</button>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            INTRODUCTION
+        </div>
+        <div class="main-content">
+            <div class="content-text">
+                <h1>History of Electronics</h1>
+                <p>Electronic devices often are used to amplify or modify electromagnetic waves, and to switch electrical energy on or off. The type of component used to provide amplification or switching divides the history of electronic devices into three eras:</p>
+                <ul>
+                    <li><strong>The Vacuum Tube Era</strong></li>
+                    <li><strong>The Solid State (Discrete Component) Era</strong></li>
+                    <li><strong>The Integrated Circuit Era</strong></li>
+                </ul>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-point top">
+                        <div class="text">1995</div>
+                    </div>
+                    <div class="timeline-point bottom">
+                        <div class="text">1900</div>
+                    </div>
+                </div>
+                <img src="/static/images/integrated_circuit.png" alt="1958 - Invention of The Integrated Circuit">
+            </div>
+            <div class="footer">
+                <a href="/general_overview"><button>INDEX</button></a>
+                <button>Glossary</button>
+                <div class="page-number">Page 4 of 15</div>
+                <button>&#9664;</button>
+                <button>&#9654;</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

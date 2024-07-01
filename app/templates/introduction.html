@@ -4,25 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/styles.css">
-    <title>{{content.title}}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>{{ content.title }}</title>
+    
 </head>
 <body>
     <div class="container">
         <div class="sidebar">
-            <h1>{{content.title}}</h1>
-            <button class="exit-btn">Exit</button>
+            <h1>{{ content.title }}</h1>
         </div>
         <div class="main-content">
-            <h2>{{content.title}}</h2>
+            <h2>{{ content.title }}</h2>
             <div class="content-text">
-                <ul>
-                    {% for item in content.items %}
-                    <li>
-                        <input type="checkbox" id="item{{loop.index}}" name="item{{loop.index}}" onclick="location.href='{{ item.url }}'">
-                        <label for="item{{loop.index}}">{{ item.text }}</label>
-                    </li>
-                    {% endfor %}
-                </ul>
+                <div class="menu-buttons">
+                    <a href="/general_overview/introduction/objectives"><button>Objectives</button></a>
+                    <a href="/general_overview/introduction/electricity_electronics"><button>Electricity and Electronics</button></a>
+                    <a href="/general_overview/introduction/history_electronics"><button>History of Electronics</button></a>
+                    <a href="/general_overview/introduction/vacuum_tubes"><button>Vacuum Tubes</button></a>
+                    <a href="/general_overview/introduction/solid_state"><button>Solid State</button></a>
+                    <a href="/general_overview/introduction/integrated_circuits"><button>Integrated Circuits</button></a>
+                    <a href="/general_overview/introduction/analog_and_digital"><button>Analog and Digital</button></a>
+                    <a href="/general_overview/introduction/binary_counting"><button>Binary Counting</button></a>
+                    <a href="/general_overview/introduction/digital_logic"><button>Digital Logic</button></a>
+                    <a href="/general_overview/introduction/objectives"><button>Integrated Circuit Development</button></a>
+                    <a href="/general_overview/introduction/objectives"><button>Small Scale Devices</button></a>
+                    <a href="/general_overview/introduction/objectives"><button>Large Scale Devices</button></a>
+                    <a href="/general_overview/introduction/objectives"><button>Very Large Scale Devices</button></a>
+                    
+                </div>
             </div>
             <div class="footer">
                 <a href="/general_overview"><button>Table of Contents</button></a>
