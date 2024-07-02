@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>Electricity and Electronics</title>
+    <title>{{ content.title }}</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -64,12 +64,32 @@
 
         .image-container {
             text-align: center;
+            margin-top: 20px;
         }
 
         .image-container img {
             max-width: 100%;
             height: auto;
             border: 2px solid #ccc;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            background-color: #dcdcdc; /* Light grey button */
+            color: black;
+            border: 2px solid #a9a9a9; /* Dark grey border */
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .button-container button:hover {
+            background-color: #b0c4de; /* Light blue on hover */
         }
 
         .footer {
@@ -122,7 +142,7 @@
 </head>
 <body>
     <div class="exit">
-        <button>Exit</button>
+        <a href="/"><button>Home</button></a>
     </div>
     <div class="container">
         <div class="sidebar">
@@ -130,19 +150,20 @@
         </div>
         <div class="main-content">
             <div class="content-text">
-                <h1>Electricity & Electronics</h1>
-                <p><p>For many centuries, electricity was regarded as a curiosity with little practical use. However, in the late 19th century, scientists began to develop valuable electrical devices such as motors, generators, and electric lights. All <strong>electric devices</strong> have one thing in common: they <strong>perform work</strong>. Around the same time, researchers began to develop the concept of the electronic device. An <strong>electronic device</strong> uses electrical energy to <strong>transfer information</strong>.</p>.</p>
-
-
+                <h1>Large Scale Devices</h1>
+                <p>Large-scale integration involves even more gates and performs entire blocks of circuit functions. LSI devices contain 100 to 1000 gate equivalents per chip. First-generation microprocessors and memory are examples of large-scale devices. Cellular phones use large-scale integration.</p>
+                <p>Large-scale
+                    integration (LSI) is the process of integrating or embedding thousands of transistors on a single silicon semiconductor microchip. LSI technology was conceived in the mid-1970s when computer processor microchips were under development. The development of LSI technology led to the development of very large-scale integration (VLSI) technology, which involves the integration of over 100,000 components on a single chip. LSI technology is used to create electronic circuits for computers, telecommunications equipment, and other electronic devices. LSI technology is also used in the design of specific types of integrated circuits, such as memory chips and microprocessors.</p>
+                <p>LSI technology is used to create electronic circuits for computers, telecommunications equipment, and other electronic devices. LSI technology is also used in the design of specific types of integrated circuits, such as memory chips and microprocessors. LSI technology is used to create electronic circuits for computers, telecommunications equipment, and other electronic devices. LSI technology is also used in the design of specific types of integrated circuits, such as memory chips and microprocessors.</p>
             </div>
             <div class="image-container">
-                <img src="/images/EVSE.png" alt="Electric Devices Perform Work and Transfer Information">
+                <img src="/images/cellphones.png" alt="Large Scale Device">
             </div>
             <div class="footer">
                 <a href="/general_overview"><button>INDEX</button></a>
                 <button>Glossary</button>
-                <div class="page-number">Page 3 of 15</div>
-                <button>&#9664;</button>
+                <div class="page-number">Page 14 of 15</div>
+                <a href="/general_overview/introduction/medium_scale_devices"><button>&#9664;</button></a>
                 <button>&#9654;</button>
             </div>
         </div>

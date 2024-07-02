@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>Electricity and Electronics</title>
+    <title>{{ content.title }}</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -64,12 +64,32 @@
 
         .image-container {
             text-align: center;
+            margin-top: 20px;
         }
 
         .image-container img {
             max-width: 100%;
             height: auto;
             border: 2px solid #ccc;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            background-color: #dcdcdc; /* Light grey button */
+            color: black;
+            border: 2px solid #a9a9a9; /* Dark grey border */
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .button-container button:hover {
+            background-color: #b0c4de; /* Light blue on hover */
         }
 
         .footer {
@@ -130,20 +150,23 @@
         </div>
         <div class="main-content">
             <div class="content-text">
-                <h1>Electricity & Electronics</h1>
-                <p><p>For many centuries, electricity was regarded as a curiosity with little practical use. However, in the late 19th century, scientists began to develop valuable electrical devices such as motors, generators, and electric lights. All <strong>electric devices</strong> have one thing in common: they <strong>perform work</strong>. Around the same time, researchers began to develop the concept of the electronic device. An <strong>electronic device</strong> uses electrical energy to <strong>transfer information</strong>.</p>.</p>
-
+                <h1>Very Large Scale Devices</h1>
+                <p>Very large-scale devices are integrated circuits that contain a large number of gates. A gate is a basic building block of digital circuits that performs a logical operation on one or more binary inputs and produces a single binary output. Gates are combined to create more complex circuits, such as adders, multiplexers, and flip-flops.</p>
+                <p>Very large-scale devices contain over 1000 gate equivalents per chip and represent the state of the art in chip manufacturing today. Advanced microprocessors and one-megabyte memory chips are examples of very large-scale devices. The central processing units of modern personal computers are also very large-scale devices.</p>
+                <p>Very large-scale devices are used in a wide range of applications, including personal computers, workstations, and mainframe computers. They are also used in embedded systems, such as those found in automobiles, appliances, and industrial equipment.</p>
+                <p>Very large-scale devices are manufactured using a process called photolithography. This process involves using light to transfer a pattern from a mask to a light-sensitive material on a silicon wafer. The pattern is then etched into the material to create the desired circuitry.</p>
+                <p>Very large-scale devices are typically made using a process called complementary metal-oxide-semiconductor (CMOS) technology. This technology uses both
 
             </div>
             <div class="image-container">
-                <img src="/images/EVSE.png" alt="Electric Devices Perform Work and Transfer Information">
+                <img src="/images/CPU.png" alt="Very Large Scale Device">
             </div>
             <div class="footer">
                 <a href="/general_overview"><button>INDEX</button></a>
                 <button>Glossary</button>
-                <div class="page-number">Page 3 of 15</div>
+                <div class="page-number">Page 15 of 15</div>
                 <button>&#9664;</button>
-                <button>&#9654;</button>
+                <a href="/general_overview/introduction/large_scale_devices"><button>&#9664;</button></a>
             </div>
         </div>
     </div>

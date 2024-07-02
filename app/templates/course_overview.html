@@ -5,19 +5,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>{{ content.title }}</title>
-    
+    <title>Course Overview</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #d3d3d3; /* Light grey background */
+            color: #333;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 900px;
+            margin: auto;
+            background: #e6e6e6; /* Light grey background for container */
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            border: 2px solid #ccc; /* Border for the container */
+            overflow: hidden;
+        }
+
+        .sidebar {
+            background-color: #a9a9a9; /* Dark grey color for high-tech look */
+            color: white;
+            padding: 20px;
+            border-right: 2px solid #ccc;
+            text-align: center;
+            font-weight: bold;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 20px;
+        }
+
+        .main-content {
+            background-color: #ffffff;
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .content-text {
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .content-text h1 {
+            color: #8b0000; /* Dark red for heading */
+            font-size: 24px;
+        }
+
+        .content-text strong {
+            color: #8b0000; /* Dark red for strong text */
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            background-color: #dcdcdc; /* Light grey button */
+            color: black;
+            border: 2px solid #a9a9a9; /* Dark grey border */
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .button-container button:hover {
+            background-color: #b0c4de; /* Light blue on hover */
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer button {
+            margin: 5px;
+            background-color: #dcdcdc; /* Light grey buttons */
+            color: black;
+            border: 2px solid #a9a9a9; /* Dark grey border */
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .footer button:hover {
+            background-color: #b0c4de; /* Light blue on hover */
+        }
+
+        .footer .page-number {
+            font-size: 14px;
+        }
+
+        .exit {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .exit button {
+            background-color: #dcdcdc; /* Light grey button */
+            color: black;
+            border: 2px solid #a9a9a9; /* Dark grey border */
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .exit button:hover {
+            background-color: #b0c4de; /* Light blue on hover */
+        }
+    </style>
 </head>
 <body>
+    <div class="exit">
+        <button>Home</button>
+    </div>
     <div class="container">
         <div class="sidebar">
-            <h1>{{ content.title }}</h1>
+            <h1>Semiconductor Overview</h1>
         </div>
         <div class="main-content">
             <div class="content-text">
-                {{ content.text }}
+                <p>This Semiconductor application provides an overview of the semiconductor fabrication process. The materials are organized into two levels, each divided into chapters. The General Overview is intended for a non-technical audience and provides a basic understanding of semiconductor fabrication terminology, the scientific basis, and a simplified overview of the process. It is recommended that students follow the chapters in order. The Technical Overview is intended for technical personnel and equipment operators, offering more detailed information on each step of the fabrication process. Each chapter covers a single step and is designed to stand alone, allowing chapters to be taken in any order.</p>
             </div>
-            <a href="/"><button class="done-btn">Done</button></a>
+            <div class="button-container">
+                <a href="/"><button class="done-btn">Done</button></a>
+            </div>
         </div>
     </div>
 </body>

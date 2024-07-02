@@ -4,17 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/styles.css">
-    <title>{{ content.title }}</title>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Objectives</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #d3d3d3; /* Light grey background */
+            color: #333;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 900px;
+            margin: auto;
+            background: #e6e6e6; /* Light grey background for container */
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            border: 2px solid #ccc; /* Border for the container */
+            overflow: hidden;
+        }
+
+        .sidebar {
+            background-color: #007bff; /* Blue color for high-tech look */
+            color: white;
+            padding: 20px;
+            border-right: 2px solid #ccc;
+            text-align: center;
+            font-weight: bold;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 20px;
+        }
+
+        .main-content {
+            background-color: #ffffff;
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .main-content h2 {
+            margin-top: 0;
+            font-size: 22px;
+            text-align: center;
+            color: #333;
+        }
+
+        .content-text {
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .content-text ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .footer button {
+            margin: 5px;
+            background-color: #007bff; /* Blue buttons for consistency */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .footer button:hover {
+            background-color: #0056b3;
+        }
+
+        .exit {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .exit button {
+            background-color: #dcdcdc; /* Light grey button */
+            color: black;
+            border: 2px solid #a9a9a9; /* Dark grey border */
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .exit button:hover {
+            background-color: #b0c4de; /* Light blue on hover */
+        }
+    </style>
 </head>
 <body>
+    <div class="exit">
+        <button>Home</button>
+    </div>
     <div class="container">
         <div class="sidebar">
-            <h1>{{ content.title }}</h1>
+            <h1>Objectives</h1>
         </div>
         <div class="main-content">
-            <h2><p>At the end of this section, the student will be able to:</p></h2>
+            <h2>Objectives</h2>
             <div class="content-text">
+                <p>At the end of this section, the student will be able to:</p>
                 <ul>
                     <li>Identify three stages in the history of electronics.</li>
                     <li>Identify four stages in the development of integrated circuits.</li>

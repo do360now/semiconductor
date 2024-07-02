@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>Electricity and Electronics</title>
+    <title>Medium Scale Devices</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -64,12 +64,32 @@
 
         .image-container {
             text-align: center;
+            margin-top: 20px;
         }
 
         .image-container img {
             max-width: 100%;
             height: auto;
             border: 2px solid #ccc;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            background-color: #dcdcdc; /* Light grey button */
+            color: black;
+            border: 2px solid #a9a9a9; /* Dark grey border */
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .button-container button:hover {
+            background-color: #b0c4de; /* Light blue on hover */
         }
 
         .footer {
@@ -122,7 +142,7 @@
 </head>
 <body>
     <div class="exit">
-        <button>Exit</button>
+        <a href="/"><button>Home</button></a>
     </div>
     <div class="container">
         <div class="sidebar">
@@ -130,20 +150,23 @@
         </div>
         <div class="main-content">
             <div class="content-text">
-                <h1>Electricity & Electronics</h1>
-                <p><p>For many centuries, electricity was regarded as a curiosity with little practical use. However, in the late 19th century, scientists began to develop valuable electrical devices such as motors, generators, and electric lights. All <strong>electric devices</strong> have one thing in common: they <strong>perform work</strong>. Around the same time, researchers began to develop the concept of the electronic device. An <strong>electronic device</strong> uses electrical energy to <strong>transfer information</strong>.</p>.</p>
-
-
+                <h1>Medium Scale Devices</h1>
+                <p>As technology in the semiconductor industry advanced, the complexity of integrated circuits increased. Medium-scale chips contain many gates on the substrate, interconnected to perform more complex functions, such as encoders and multiplexers. These chips include 10 to 100 gate equivalents per chip. A computer keyboard is an example of a device that uses medium-scale integration.</p>
             </div>
             <div class="image-container">
-                <img src="/images/EVSE.png" alt="Electric Devices Perform Work and Transfer Information">
+                <img src="/images/keyboard.png" alt="Medium Scale Device">
             </div>
             <div class="footer">
                 <a href="/general_overview"><button>INDEX</button></a>
+                <a href="/general_overview/introduction/large_scale_devices"><button>Next</button></a>
+                <a href="/general_overview/introduction/small_scale_devices"><button>Previous</button></a>
+                <a href="/glossary"><button>Glossary</button></a>
+                <div class="page-number">Page 13 of 15</div>
+                <a href="/general_overview/introduction/large_scale_devices"><button>&#9664;</button></a>
+                <a href="/general_overview/introduction/small_scale_devices"><button>&#9664;</button></a>
+            </div>
+        </div>
                 <button>Glossary</button>
-                <div class="page-number">Page 3 of 15</div>
-                <button>&#9664;</button>
-                <button>&#9654;</button>
             </div>
         </div>
     </div>

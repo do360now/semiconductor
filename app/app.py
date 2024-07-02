@@ -13,7 +13,7 @@ app.mount("/images", StaticFiles(directory="images"), name="images")
 app.include_router(pages.router)
 
 def main():
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=80)
 
 if __name__ == "__main__":
     main()

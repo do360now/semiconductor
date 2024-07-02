@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>Integrated Circuits</title>
+    <title>Integrated Circuit Development</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -138,6 +138,63 @@
         .exit button:hover {
             background-color: #b0c4de; /* Light blue on hover */
         }
+
+        .timeline-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .timeline-container img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+        }
+
+        .timeline {
+            position: relative;
+            width: 200px;
+            margin: 20px auto;
+        }
+
+        .timeline-line {
+            width: 5px;
+            height: 200px;
+            background: black;
+            margin: 0 auto;
+        }
+
+        .timeline-point {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: blue;
+            border-radius: 50%;
+        }
+
+        .timeline-point p {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        .timeline-point .top {
+            top: 0;
+        }
+
+        .timeline-point .bottom {
+            bottom: 0;
+        }
+
+        .timeline-point .text {
+            position: absolute;
+            width: 100px;
+            left: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -150,17 +207,36 @@
         </div>
         <div class="main-content">
             <div class="content-text">
-                <h1>Integrated Circuits</h1>
-                <p>As the 1950's drew to a close, electronic devices built by connecting individual transistors, and other discrete devices were again testing the limits of technology. Circuits had become so complex that size, heat dissipation, and even wiring the pieces together was a problem. In 1959 scientists developed a solution, the integrated circuit. This device replaced many discrete devices with a single miniature "chip". On the chip were tiny transistors and all the interconnects necessary. Integrated circuits offered several advantages:</p>
+                <h1>Integrated Circuit Development</h1>
+                <p>Since its invention in the 1960's, the integrated circuit (IC) has become ever more complex. Currently ICs are designated as one of four classes based on the number of logic gate equivalents per chip. These are:</p>
                 <ul>
-                    <li><strong>Smaller Size</strong></li>
-                    <li><strong>Increased Reliability</strong></li>
-                    <li><strong>Reduced Power Requirements</strong></li>
-                    <li><strong>Lower Cost</strong></li>
+                    <li><strong>Small Scale Integration (SSI)</strong></li>
+                    <li><strong>Medium Scale Integration (MSI)</strong></li>
+                    <li><strong>Large Scale Integration (LSI)</strong></li>
+                    <li><strong>Very Large Scale Integration (VLSI)</strong></li>
                 </ul>
+                <p>As a family, integrated circuits can be found in most electronic devices, from those as simple as a garage door opener to the most complex computers.</p>
+                <p>ICs have been developed in a series of steps, each of which has been a major advance in the technology. The first step was the invention of the transistor in 1947. This was followed by the development of the planar process in 1959, which allowed the fabrication of multiple transistors on a single chip. The next major step was the invention of the MOSFET (Metal Oxide Semiconductor Field Effect Transistor) in 1960. This device was the basis for the development of the first integrated circuits in 1961.</p>
+                <p>Since then, the number of transistors on a chip has increased dramatically. The first ICs had only a few transistors, while today's ICs can have millions of transistors on a single chip. This has been made possible by the development of new materials and processes that allow the fabrication of ever smaller transistors.</p>
+                <p>One of the most important developments in IC technology has been the development of the microprocessor. This device is a complete computer on a single chip and has revolutionized the electronics industry. Microprocessors are used in everything from personal computers to microwave ovens.</p>
+                <p>Another important development has been the development of memory chips. These devices store information in digital form and are used in everything from computers to digital cameras.</p>
+                <p>IC technology is continuing to advance at a rapid pace. New materials and processes are being developed that will allow the fabrication of even smaller and more powerful ICs. These devices will continue to revolutionize the electronics industry and change the way we live and work.</p>
+                
+            </div>
+            <div class="timeline-container">
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-point top">
+                        <div class="text">1995</div>
+                    </div>
+                    <div class="timeline-point bottom">
+                        <div class="text">1958</div>
+                    </div>
+                </div>
+                <img src="/static/images/integrated_circuit_history.png" alt="History of Integrated Circuits">
             </div>
             <div class="image-container">
-                <img src="/static/images/integrated_circuit.png" alt="Integrated Circuit">
+                <img src="/static/images/integrated_circuit_large_scale.png" alt="Large Scale Device">
             </div>
             <div class="button-container">
                 <button>View an Event from the IC Era</button>
@@ -168,7 +244,7 @@
             <div class="footer">
                 <a href="/general_overview"><button>INDEX</button></a>
                 <button>Glossary</button>
-                <div class="page-number">Page 7 of 15</div>
+                <div class="page-number">Page 11 of 15</div>
                 <button>&#9664;</button>
                 <button>&#9654;</button>
             </div>
