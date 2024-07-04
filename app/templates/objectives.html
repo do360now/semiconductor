@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/goldenwafers.png">
     <title>Objectives</title>
     <style>
         body {
@@ -27,7 +28,7 @@
         }
 
         .sidebar {
-            background-color: #007bff; /* Blue color for high-tech look */
+            background-color: #a9a9a9; /* Dark grey color for high-tech look */
             color: white;
             padding: 20px;
             border-right: 2px solid #ccc;
@@ -76,9 +77,9 @@
 
         .footer button {
             margin: 5px;
-            background-color: #007bff; /* Blue buttons for consistency */
-            color: white;
-            border: none;
+            background-color: #dcdcdc; /* Light grey buttons */
+            color: black;
+            border: 2px solid #a9a9a9; /* Dark grey border */
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
@@ -86,7 +87,7 @@
         }
 
         .footer button:hover {
-            background-color: #0056b3;
+            background-color: #b0c4de; /* Light blue on hover */
         }
 
         .exit {
@@ -112,7 +113,7 @@
 </head>
 <body>
     <div class="exit">
-        <button>Home</button>
+        <a href="/"><button>Home</button></a>
     </div>
     <div class="container">
         <div class="sidebar">
@@ -121,7 +122,8 @@
         <div class="main-content">
             <h2>Objectives</h2>
             <div class="content-text">
-                <p>At the end of this section, the student will be able to:</p>
+
+                <p>By the end of this section, students will be able to:</p>
                 <ul>
                     <li>Identify three stages in the history of electronics.</li>
                     <li>Identify four stages in the development of integrated circuits.</li>
@@ -131,9 +133,12 @@
                 </ul>
             </div>
             <div class="footer">
-                <a href="/general_overview/introduction"><button>INDEX</button></a>
+                <a href="/general_overview/introduction"><button>Back</button></a>
                 <button>Glossary</button>
-            </div>
+                <div class="page-number">Page 2 of 15</div>
+                <a href="/general_overview/introduction"><button>&#9664;</button></a>
+                <a href="/general_overview/introduction/electricity_electronics"><button>&#9654;</button></a>
+
         </div>
     </div>
 </body>

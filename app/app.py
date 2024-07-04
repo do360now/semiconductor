@@ -8,6 +8,7 @@ app = FastAPI()
 # Mount static files
 app.mount("/static", StaticFiles(directory="static"), name="static")
 app.mount("/images", StaticFiles(directory="images"), name="images")
+app.mount("/videos", StaticFiles(directory="videos"), name="videos")
 
 # Include routers
 app.include_router(pages.router)
