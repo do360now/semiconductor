@@ -10,134 +10,75 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #d3d3d3; /* Light grey background */
+            background-color: #d3d3d3;
             color: #333;
             margin: 0;
+            padding: 20px;
         }
-
         .container {
-            display: flex;
-            flex-direction: row;
             max-width: 900px;
             margin: auto;
-            background: #e6e6e6; /* Light grey background for container */
-            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+            background: #e6e6e6;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
             border-radius: 10px;
-            border: 2px solid #ccc; /* Border for the container */
-            overflow: hidden;
+            border: 2px solid #ccc;
+            padding: 20px;
         }
-
         .sidebar {
-            background-color: #a9a9a9; /* Dark grey color for high-tech look */
+            background-color: #a9a9a9;
             color: white;
             padding: 20px;
-            border-right: 2px solid #ccc;
-            text-align: center;
-            font-weight: bold;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
             font-size: 20px;
+            flex-basis: 150px;
         }
-
         .main-content {
-            background-color: #ffffff;
             padding: 20px;
             flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
-
-        .content-text {
-            text-align: left;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
         .content-text h1 {
-            color: #8b0000; /* Dark red for heading */
-            font-size: 24px;
+            color: #8b0000;
         }
-
         .content-text strong {
-            color: #8b0000; /* Dark red for strong text */
+            color: #8b0000;
         }
-
-        .image-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-
         .image-container img {
             max-width: 100%;
-            height: auto;
-            border: 2px solid #ccc;
         }
-
-        .button-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-
         .button-container button {
-            background-color: #dcdcdc; /* Light grey button */
-            color: black;
-            border: 2px solid #a9a9a9; /* Dark grey border */
+            background-color: #dcdcdc;
+            border: 2px solid #a9a9a9;
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
-            font-weight: bold;
         }
-
         .button-container button:hover {
-            background-color: #b0c4de; /* Light blue on hover */
+            background-color: #b0c4de;
         }
-
         .footer {
-            text-align: center;
             margin-top: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         .footer button {
-            margin: 5px;
-            background-color: #dcdcdc; /* Light grey buttons */
-            color: black;
-            border: 2px solid #a9a9a9; /* Dark grey border */
+            background-color: #dcdcdc;
+            border: 2px solid #a9a9a9;
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
-            font-weight: bold;
         }
-
         .footer button:hover {
-            background-color: #b0c4de; /* Light blue on hover */
+            background-color: #b0c4de;
         }
-
-        .footer .page-number {
-            font-size: 14px;
-        }
-
-        .exit {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-        }
-
         .exit button {
-            background-color: #dcdcdc; /* Light grey button */
-            color: black;
-            border: 2px solid #a9a9a9; /* Dark grey border */
+            background-color: #dcdcdc;
+            border: 2px solid #a9a9a9;
             padding: 5px 10px;
             border-radius: 5px;
             cursor: pointer;
-            font-weight: bold;
         }
-
         .exit button:hover {
-            background-color: #b0c4de; /* Light blue on hover */
+            background-color: #b0c4de;
         }
     </style>
 </head>
@@ -152,7 +93,12 @@
         <div class="main-content">
             <div class="content-text">
                 <h1>Integrated Circuits</h1>
-                <p>As the 1950's drew to a close, electronic devices built by connecting individual transistors, and other discrete devices were again testing the limits of technology. Circuits had become so complex that size, heat dissipation, and even wiring the pieces together was a problem. In 1959 scientists developed a solution, the integrated circuit. This device replaced many discrete devices with a single miniature "chip". On the chip were tiny transistors and all the interconnects necessary. Integrated circuits offered several advantages:</p>
+                <p>As the 1950's drew to a close, electronic devices built by connecting individual transistors, and other discrete devices were again testing the limits of technology.</p>
+                <p>Circuits had become so complex that size, heat dissipation, and even wiring the pieces together was a problem.</p>
+                <p>In 1959 scientists developed a solution, the integrated circuit.</p>
+                <p>This device replaced many discrete devices with a single miniature "chip".</p>
+                <p>On the chip were tiny transistors and all the interconnects necessary.</p>
+                <p>Integrated circuits offered several advantages:</p>
                 <ul>
                     <li><strong>Smaller Size</strong></li>
                     <li><strong>Increased Reliability</strong></li>
@@ -161,18 +107,32 @@
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/static/images/integrated_circuit.png" alt="Integrated Circuit">
+                <img src="/images/IC.png" alt="Integrated Circuit">
             </div>
             <div class="button-container">
-                <button>View an Event from the IC Era</button>
+                <video id="tubeVideo" controls style="width: 100%; height: auto;">
+                    <source src="/videos/1960S.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button onclick="toggleVideo()">View an Event from the Integrated Circuit Era</button>
             </div>
-            <div class="footer">
-                <a href="/general_overview"><button>Back</button></a>
-                <button>Glossary</button>
-                <div class="page-number">Page 7 of 15</div>
-                <button>&#9664;</button>
-                <button>&#9654;</button>
-            </div>
+            <script>
+                function toggleVideo() {
+                    var video = document.getElementById('tubeVideo');
+                    if (video.paused) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                }
+            </script>
+        </div>
+        <div class="footer">
+            <a href="/general_overview/introduction"><button>Back</button></a>
+            <button>Glossary</button>
+            <div class="page-number">Page 7 of 15</div>
+            <a href="/general_overview/introduction/solid_state"><button>&#9664;</button></a>
+            <a href="/general_overview/introduction/analog_and_digital"><button>&#9654;</button></a>
         </div>
     </div>
 </body>

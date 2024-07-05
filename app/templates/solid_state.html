@@ -139,6 +139,24 @@
         .exit button:hover {
             background-color: #b0c4de; /* Light blue on hover */
         }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        video {
+            width: 50%; /* Adjust size as needed */
+            height: auto;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers the content horizontally in a flex container */
+            justify-content: center; /* Centers the content vertically in a flex container */
+            text-align: center;
+            margin-top: 20px;
+        }
+        
     </style>
 </head>
 <body>
@@ -152,20 +170,74 @@
         <div class="main-content">
             <div class="content-text">
                 <h1>Solid State</h1>
-                <p>The development of reliable semiconductor-based electronic devices has impacted all our lives. By the 1950s, vacuum tube electronics had reached a plateau. New, more reliable components were needed. In 1947 scientists at the Bell Laboratories demonstrated a solid state amplifier built from germanium. Their device, <strong>the transistor</strong>, could perform the same functions as a vacuum tube, but it was very small, offered increased reliability, and required low power. The 1950s was the age of the transistor.</p>
+                <p>The development of reliable semiconductor-based electronic devices has impacted all our lives.</p>
+                <p>Today, we take for granted the tiny, powerful, and inexpensive electronic devices that are part of our daily lives.</p>
+                <p>But it wasn't always this way.</p>
+                <p>Before the 1950s, electronic devices were built using vacuum tubes.</p>
+                <p>These tubes were large, fragile, and consumed a lot of power.</p>
+                <p>They were also prone to failure.</p>
+                <p>
+                    <strong>Transistors</strong> changed all that.
+                </p>
+                <p>They were the first solid-state electronic devices.</p>
+                <p>They were small, reliable, and consumed very little power.</p>
+                <p>They were the foundation of the modern electronics industry.</p>
+                <p>Transistors were the first step in the development of the integrated circuit.</p>
+                <p>Integrated circuits are the building blocks of all modern electronic devices.</p>
+                <p>They are the reason why electronic devices are so small, powerful, and inexpensive.</p>
+                <p>They are the reason why we have the Internet, smartphones, and so much more.</p>
+                <p>But it all started with the transistor.</p>
+                <p>Let's take a closer look at the transistor era.</p>
+                <p>What was it like?</p>
+                <p>What were the key events?</p>
+                <p>What were the key technologies?</p>
+                <p>Let's find out.</p>
+                <p>Click the button below to view an event from the transistor era.</p>
+                <p>Or click the "Back" button to return to the previous page.</p>
+                <p>Or click the "Glossary" button to view the glossary.</p>
+                <p>Or use the navigation buttons to move between pages.</p>
+                <p>Enjoy!</p>
+                <p>And remember, the transistor era was just the beginning.</p>
+                <p>There is so much more to come.</p>
+                <p>Stay tuned!</p>
+                
+                <p>By the 1950s, vacuum tube electronics had reached a plateau.</p>
+                <p>New, more reliable components were needed.</p>
+                <p>In 1947 scientists at the Bell Laboratories demonstrated a solid state amplifier built from germanium.</p>
+                <p>Their device, <strong>the transistor</strong>, could perform the same functions as a vacuum tube, but it was very small, offered increased reliability, and required low power.</p>
+                <p>The 1950s was the age of the transistor.</p>
+                
             </div>
             <div class="image-container">
-                <img src="/static/images/transistor.png" alt="Transistor">
+                <img src="/images/transistor.png" alt="Transistor">
             </div>
             <div class="button-container">
                 <button>View an Event from the Transistor Era</button>
             </div>
+            <div class="button-container">
+                <video id="tubeVideo" controls>
+                    <source src="/videos/1950S.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button onclick="toggleVideo()">View an Event from the Solid State Era</button>
+            </div>
+            <script>
+                function toggleVideo() {
+                    var video = document.getElementById('tubeVideo');
+                    if (video.paused) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                }
+            </script>
             <div class="footer">
-                <a href="/general_overview"><button>Back</button></a>
+                <a href="/general_overview/introduction"><button>Back</button></a>
                 <button>Glossary</button>
                 <div class="page-number">Page 6 of 15</div>
-                <button>&#9664;</button>
-                <button>&#9654;</button>
+                <a href="/general_overview/introduction/vacuum_tubes"><button>&#9664;</button></a>
+                <a href="/general_overview/introduction/integrated_circuits"><button>&#9654;</button></a>
+            </div>
             </div>
         </div>
     </div>

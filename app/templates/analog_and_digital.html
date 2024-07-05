@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/images/goldenwafers.png">
-    <title>Analog & Digital</title>
+    <title>Analog and Digital Signals</title>
     <style>
+        .content {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .lightbulb {
+            width: 50px;
+            height: 50px;
+        }
+        .lightbulb-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #d3d3d3; /* Light grey background */
@@ -65,32 +78,12 @@
 
         .image-container {
             text-align: center;
-            margin-top: 20px;
         }
 
         .image-container img {
             max-width: 100%;
             height: auto;
             border: 2px solid #ccc;
-        }
-
-        .button-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .button-container button {
-            background-color: #dcdcdc; /* Light grey button */
-            color: black;
-            border: 2px solid #a9a9a9; /* Dark grey border */
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .button-container button:hover {
-            background-color: #b0c4de; /* Light blue on hover */
         }
 
         .footer {
@@ -140,116 +133,107 @@
             background-color: #b0c4de; /* Light blue on hover */
         }
 
-        .mode-buttons {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-        }
-
-        .mode-buttons button {
-            margin: 0 10px;
-            padding: 5px 10px;
-            background-color: #f0f0f0;
-            border: 2px solid #a9a9a9;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .mode-buttons button.active {
-            background-color: #dcdcdc;
-        }
-
-        .mode-buttons button:hover {
-            background-color: #b0c4de;
-        }
-
-        .mode-text {
-            text-align: center;
-            margin-top: 10px;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .switches {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .switch {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            margin: 0 5px;
-            background-color: #fff;
-            border: 2px solid #a9a9a9;
-            border-radius: 5px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .switch.active {
-            background-color: #dcdcdc;
-        }
-
-        .switch:hover {
-            background-color: #b0c4de;
-        }
     </style>
 </head>
 <body>
-    <div class="exit">
-        <a href="/"><button>Home</button></a>
+<div class="container">
+    <div class="sidebar">
+        INTRODUCTION
     </div>
-    <div class="container">
-        <div class="sidebar">
-            INTRODUCTION
+    <div class="main-content">
+    <div class="content">
+        <div class="lightbulb-container">
+            <img src="/images/light-bulb.png" alt="Lightbulb" id="lightbulb" class="lightbulb">
+            <span id="brightness-level">Brightness: 50%</span>
         </div>
-        <div class="main-content">
-            <div class="content-text">
-                <h1>Analog & Digital</h1>
-                <p>Electronic devices may be classified as either analog or digital. Components that operate in analog mode are able to produce <strong>continuous changes between set limits</strong>. Digital components are restricted to <strong>discrete changes between limits</strong>.</p>
-                <p>For example, an analog clock has a continuous sweep of the second hand, while a digital clock has a second hand that moves in discrete steps.</p>
-                <p>
-                    <strong>Analog</strong> - A continuous signal that varies in amplitude or frequency. Analog signals are used in devices such as radios, televisions, and telephones.
-                </p>
-                <p>
-                    <strong>Digital</strong> - A signal that is either on or off. Digital signals are used in devices such as computers, calculators, and digital clocks.
-                </p>
-                <p>Most electronic devices are a combination of analog and digital components. An everyday example of an analog component is a dimmer switch for a light. The light may be off, on, or any place in-between. A digital light switch provides only preset levels from off to on.</p>
-                <p>Operating in Digital Mode</p>
-                <p>When operating in digital mode, the device is restricted to discrete changes between limits. In the example below, the device has five preset levels from off to on.</p>
-                <p>When the device is in digital mode, the user can only select from the preset levels. The user cannot select any level between the preset levels.</p>
-                <p>When the device is in analog mode, the user can select any level between the preset levels. The user is not restricted to the preset levels.</p>
-                <p>An everyday example of an analog component is a dimmer switch for a light. The light may be off, on, or any place in-between. A digital light switch provides only preset levels from off to on.</p>
-            </div>
-            <div class="image-container">
-                <img src="/static/images/analog_digital.png" alt="Analog and Digital">
-            </div>
-            <div class="mode-buttons">
-                <button class="active">Analog</button>
-                <button>Digital</button>
-            </div>
-            <div class="mode-text">Operating in Digital Mode</div>
-            <div class="switches">
-                <div class="switch">OFF</div>
-                <div class="switch">1</div>
-                <div class="switch">2</div>
-                <div class="switch">3</div>
-                <div class="switch">ON</div>
-            </div>
-            <div class="footer">
-                <a href="/general_overview"><button>Back</button></a>
-                <button>Glossary</button>
-                <div class="page-number">Page 8 of 15</div>
-                <button>&#9664;</button>
-                <button>&#9654;</button>
-            </div>
+        <h1>Analog and Digital Signals</h1>
+        <p>Analog - A continuous signal that varies in amplitude or frequency. Analog signals are used in devices such as radios, televisions, and telephones.</p>
+        <p>Digital - A signal that is either on or off. Digital signals are used in devices such as computers, calculators, and digital clocks.</p>
+        <p>Most electronic devices are a combination of analog and digital components. An everyday example of an analog component is a dimmer switch for a light. The light may be off, on, or any place in-between. A digital light switch provides only preset levels from off to on.</p>
+        
+        <h2>Operating in Digital Mode</h2>
+
+        <p>When operating in digital mode, the device is restricted to discrete changes between limits. In the example below, the device has five preset levels from off to on.</p>
+        <p>When the device is in digital mode, the user can only select from the preset levels. The user cannot select any level between the preset levels.</p>
+        
+        <h2>Operating in Digital Mode</h2>
+        <p>When the device is in analog mode, the user can select any level between the preset levels. The user is not restricted to the preset levels.</p>
+        <div class="buttons">
+            <button onclick="setMode('digital')">Digital Mode</button>
+            <button onclick="setMode('analog')">Analog Mode</button>
         </div>
+        <div id="digital-controls" style="display: none;">
+            <button onclick="setBrightness(0)">0%</button>
+            <button onclick="setBrightness(25)">25%</button>
+            <button onclick="setBrightness(50)">50%</button>
+            <button onclick="setBrightness(75)">75%</button>
+            <button onclick="setBrightness(100)">100%</button>
+        </div>
+        <div id="analog-controls" style="display: none;">
+            <button onmousedown="startDimming('down')" onmouseup="stopDimming()">Dim</button>
+            <button onmousedown="startDimming('up')" onmouseup="stopDimming()">Brighten</button>
+        </div>
+    </div>
+   
+    <div id="digital-controls" style="display: none;">
+        <button onclick="setBrightness(0)">0%</button>
+        <button onclick="setBrightness(25)">25%</button>
+        <button onclick="setBrightness(50)">50%</button>
+        <button onclick="setBrightness(75)">75%</button>
+        <button onclick="setBrightness(100)">100%</button>
+    </div>
+    <div id="analog-controls" style="display: none;">
+        <button onmousedown="startDimming('down')" onmouseup="
+        stopDimming()">Dim</button>
+        <button onmousedown="startDimming('up')" onmouseup="stopDimming()">Brighten</button>
+    </div>
+    <script>
+        let brightness = 50;
+        let mode = 'digital';
+        let interval;
+
+        function setMode(newMode) {
+            mode = newMode;
+            document.getElementById('digital-controls').style.display = mode === 'digital' ? 'block' : 'none';
+            document.getElementById('analog-controls').style.display = mode === 'analog' ? 'block' : 'none';
+        }
+
+        function setBrightness(level) {
+            brightness = level;
+            updateBrightness();
+        }
+
+        function updateBrightness() {
+            document.getElementById('lightbulb').style.filter = `brightness(${brightness}%)`;
+            document.getElementById('brightness-level').innerText = `Brightness: ${brightness}%`;
+        }
+
+        function startDimming(direction) {
+            stopDimming(); // Ensure no multiple intervals
+            interval = setInterval(() => {
+                if (direction === 'down' && brightness > 0) {
+                    brightness -= 1;
+                } else if (direction === 'up' && brightness < 100) {
+                    brightness += 1;
+                }
+                updateBrightness();
+            }, 50);
+        }
+
+        function stopDimming() {
+            clearInterval(interval);
+        }
+
+        // Initialize default brightness
+        updateBrightness();
+    </script>
+    <div class="footer">
+        <a href="/general_overview/introduction"><button>Back</button></a>
+        <button>Glossary</button>
+        <div class="page-number">Page 11 of 15</div>
+        <a href="/general_overview/introduction/objectives"><button>&#9664;</button></a>
+        <a href="/general_overview/introduction/history_electronics"><button>&#9654;</button></a>
+    </div>
     </div>
 </body>
 </html>
