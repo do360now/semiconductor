@@ -112,6 +112,11 @@ async def read_objectives(request: Request):
     template = templates.get_template('integrated_circuit_development.html')
     return template.render(request=request)
 
+@router.get("/general_overview/introduction/integrated_circuit_development2", response_class=HTMLResponse)
+async def read_objectives(request: Request):
+    template = templates.get_template('integrated_circuit_development2.html')
+    return template.render(request=request)
+
 @router.get("/general_overview/introduction/small_scale_devices", response_class=HTMLResponse)
 async def read_objectives(request: Request):
     template = templates.get_template('small_scale_devices.html')

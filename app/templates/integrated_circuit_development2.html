@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated Circuit Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .controls {
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Integrated Circuit Development</h1>
+        <div class="image-container">
+            <img src="small_scale_device.png" alt="Integrated Circuit" id="icImage">
+        </div>
+        <div class="controls">
+            <button id="prevButton">&lt; Prev</button>
+            <button id="nextButton">Next &gt;</button>
+        </div>
+    </div>
+
+    <script>
+        const icImages = [
+            "/images/small_scale_device.png", // Small Scale Integration
+            "medium_scale_device.png", // Medium Scale Integration
+            "large_scale_device.png", // Large Scale Integration
+            "very_large_scale_device.png" // Very Large Scale Integration
+        ];
+        let currentIndex = 0;
+
+        const icImageElement = document.getElementById('icImage');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+
+        function updateImage() {
+            icImageElement.src = icImages[currentIndex];
+            prevButton.disabled = currentIndex === 0;
+            nextButton.disabled = currentIndex === icImages.length - 1;
+        }
+
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateImage();
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < icImages.length - 1) {
+                currentIndex++;
+                updateImage();
+            }
+        });
+
+        // Initialize
+        updateImage();
+    </script>
+</body>
+</html>

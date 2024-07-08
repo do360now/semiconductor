@@ -9,126 +9,57 @@
     <title>Course Overview</title>
    
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #d3d3d3; /* Light grey background */
-            color: #333;
-            margin: 0;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: row;
-            max-width: 900px;
-            margin: auto;
-            background: #e6e6e6; /* Light grey background for container */
-            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
-            border-radius: 10px;
-            border: 2px solid #ccc; /* Border for the container */
-            overflow: hidden;
-        }
-
-        .sidebar {
-            background-color: #a9a9a9; /* Dark grey color for high-tech look */
-            color: white;
-            padding: 20px;
-            border-right: 2px solid #ccc;
-            text-align: center;
-            font-weight: bold;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            font-size: 20px;
-        }
-
-        .main-content {
-            background-color: #ffffff;
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .content-text {
-            text-align: left;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        .content-text h1 {
-            color: #8b0000; /* Dark red for heading */
-            font-size: 24px;
-        }
-
-        .content-text strong {
-            color: #8b0000; /* Dark red for strong text */
-        }
-
-        .button-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .button-container button {
-            background-color: #dcdcdc; /* Light grey button */
-            color: black;
-            border: 2px solid #a9a9a9; /* Dark grey border */
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .button-container button:hover {
-            background-color: #b0c4de; /* Light blue on hover */
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .footer button {
-            margin: 5px;
-            background-color: #dcdcdc; /* Light grey buttons */
-            color: black;
-            border: 2px solid #a9a9a9; /* Dark grey border */
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .footer button:hover {
-            background-color: #b0c4de; /* Light blue on hover */
-        }
-
-        .footer .page-number {
-            font-size: 14px;
-        }
-
-        .exit {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-        }
-
-        .exit button {
-            background-color: #dcdcdc; /* Light grey button */
-            color: black;
-            border: 2px solid #a9a9a9; /* Dark grey border */
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .exit button:hover {
-            background-color: #b0c4de; /* Light blue on hover */
-        }
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                background-color: #f4f4f4;
+                color: #333;
+            }
+        
+            .sidebar {
+                background-color: #333;
+                color: white;
+                padding: 20px;
+                font-weight: bold;
+            }
+        
+            .main-content {
+                background-color: #ffffff;
+                padding: 20px;
+                line-height: 1.6;
+            }
+        
+            h1, h2 {
+                font-weight: 700;
+                color: #0056b3; /* Example accent color */
+            }
+        
+            button {
+                background-color: #007bff; /* Bootstrap primary blue */
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 5px;
+                transition: background-color 0.3s, transform 0.3s;
+            }
+        
+            button:hover {
+                background-color: #0056b3;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+        
+            @media (max-width: 768px) {
+                .container {
+                    flex-direction: column;
+                }
+        
+                .sidebar, .main-content {
+                    width: 100%;
+                }
+            }
+        </style>
+        
     </style>
 </head>
 <body>
@@ -140,19 +71,27 @@
             <h1>Semiconductor Overview</h1>
         </div>
         <div class="main-content">
-            <div class="content-text">
-                <p>This application provides an overview of the semiconductor fabrication process.</p>
+            <div>
+                <p><strong>This application provides an overview of the semiconductor fabrication process.</strong></p>
                 <p>The materials are organized into two levels, each divided into chapters.</p>
-                <p>The General Overview covers the basic concepts of semiconductor fabrication.</p>
-                <p>The Technical Overview provides more detailed information on each step of the process.</p>
-                <p>Each chapter is designed to stand alone, allowing chapters to be taken in any order.</p>
+                <ul>
+                  <li><strong>General Overview</strong> covers the basic concepts of semiconductor fabrication.</li>
+                  <li><strong>Technical Overview</strong> provides more detailed information on each step of the process.</li>
+                </ul>
+                <p><strong>Each chapter is designed to stand alone</strong>, allowing chapters to be taken in any order.</p>
                 <p>It is recommended that students follow the chapters in order.</p>
-                <p>Each chapter includes a brief introduction, objectives, and a summary.</p>
-                <p>There are also quizzes to test your knowledge.</p>
+                <p>Each chapter includes:</p>
+                <ul>
+                  <li>A brief introduction</li>
+                  <li>Objectives</li>
+                  <li>A summary</li>
+                </ul>
+                <p>There are also quizzes to <strong>test your knowledge</strong>.</p>
                 <p>It is recommended that students complete the quizzes after each chapter.</p>
-                <p>There are also links to additional resources for further study.</p>
-                <p>It is recommended that students explore these resources to deepen their understanding.</p>
-            </div>
+                <p>There are also links to <strong>additional resources</strong> for further study.</p>
+                <p>It is recommended that students explore these resources to <strong>deepen their understanding</strong>.</p>
+              </div>
+              
             <div class="button-container">
                 <a href="/"><button class="done-btn">Done</button></a>
             </div>

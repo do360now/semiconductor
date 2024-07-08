@@ -132,6 +132,26 @@
         .exit button:hover {
             background-color: #b0c4de; /* Light blue on hover */
         }
+        .menu-buttons a {
+            display: block;
+            width: 100%;
+        }
+        
+        .menu-buttons button {
+            background-color: #dcdcdc; /* Light grey buttons */
+            color: black;
+            border: 2px solid #a9a9a9; /* Dark grey border */
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .menu-buttons button:hover {
+            background-color: #b0c4de; /* Light blue on hover */
+        }
 
     </style>
 </head>
@@ -147,17 +167,30 @@
             <span id="brightness-level">Brightness: 50%</span>
         </div>
         <h1>Analog and Digital Signals</h1>
-        <p>Analog - A continuous signal that varies in amplitude or frequency. Analog signals are used in devices such as radios, televisions, and telephones.</p>
-        <p>Digital - A signal that is either on or off. Digital signals are used in devices such as computers, calculators, and digital clocks.</p>
-        <p>Most electronic devices are a combination of analog and digital components. An everyday example of an analog component is a dimmer switch for a light. The light may be off, on, or any place in-between. A digital light switch provides only preset levels from off to on.</p>
-        
-        <h2>Operating in Digital Mode</h2>
+    
+        <h2>Analog:</h2>
+        <p>An analog signal is a continuous signal that varies in amplitude or frequency. These signals are commonly used in devices such as radios, televisions, and telephones.</p>
+    
+        <h2>Digital:</h2>
+        <p>A digital signal has only two states: on or off. This type of signal is employed in devices like computers, calculators, and digital clocks.</p>
+    
+        <p>Most electronic devices incorporate a combination of analog and digital components. For instance, a common analog component is a dimmer switch for lighting, which allows for adjusting the light intensity to anywhere between fully off and fully on. Conversely, a digital light switch offers only fixed levels of lighting, such as completely off or fully on.</p>
 
-        <p>When operating in digital mode, the device is restricted to discrete changes between limits. In the example below, the device has five preset levels from off to on.</p>
-        <p>When the device is in digital mode, the user can only select from the preset levels. The user cannot select any level between the preset levels.</p>
+        <div class="menu-buttons">
+            <a href="/general_overview/introduction/binary_counting"><button>Binary Counting</button></a>
+            <p></p>
+            <a href="/general_overview/introduction/digital_logic"><button>Digital Logic</button></a>
+        </div>
+    
+        <h2>Operating in Digital and Analog Modes</h2>
         
-        <h2>Operating in Digital Mode</h2>
-        <p>When the device is in analog mode, the user can select any level between the preset levels. The user is not restricted to the preset levels.</p>
+        <h3>Digital Mode:</h3>
+        <p>When a device operates in digital mode, it can only switch between distinct preset levels. For example, a digital device might only allow adjustments across five defined levels from off to fully on. Users are restricted to these levels and cannot choose settings in between.</p>
+
+        <h3>Analog Mode:</h3>
+        <p>In contrast, when operating in analog mode, users can select any level within the available range, offering greater flexibility and control without being confined to preset options.</p>
+    
+    </body>
         <div class="buttons">
             <button onclick="setMode('digital')">Digital Mode</button>
             <button onclick="setMode('analog')">Analog Mode</button>
@@ -227,6 +260,8 @@
         // Initialize default brightness
         updateBrightness();
     </script>
+
+    
     <div class="footer">
         <a href="/general_overview/introduction"><button>Back</button></a>
         <button>Glossary</button>
