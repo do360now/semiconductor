@@ -22,27 +22,11 @@ git remote set-url origin git@github.com:do360now/semiconductor.git
 
 
 build:
-	docker build -t do360now/semiconductor:0.1.0 .
+	docker build -t do360now/semiconductor:0.1.1 .
 
 run:
-	docker run --rm --name semiconductor-overview -p 8000:8000 do360now/semiconductor:0.1.0
+	docker run --rm --name semiconductor-overview -p 8000:8000 do360now/semiconductor:0.1.1
 
-docker_push:
-	docker build -t do360now/semiconductor:0.1.0 .
-	docker push do360now/semiconductor:0.1.0
-	
+push:
+	docker push do360now/semiconductor:0.1.1
 
-docker_run:
-	docker run --rm --name semiconductor-overview -p 80:80 do360now/semiconductor:0.1.0
-
-docker_push:
-	docker push do360now/semiconductor:0.1.0
-
-deployment: docker_build docker_run
-
-docker_stop:
-	docker stop semiconductor-overview
-
-redeploy: docker_stop deploy
-
-deploy_online: docker_build docker_push

@@ -1,9 +1,11 @@
 # Use the official FastAPI image
 FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9
 
+
 # Install dependencies
+COPY ./requirements.txt /app/requirements.txt
 RUN pip install --upgrade pip
-RUN pip install fastapi uvicorn jinja2 motor pyOpenSSL cryptography
+RUN pip install -r requirements.txt
 
 # Copy the application code
 COPY ./app/ /app
