@@ -1,8 +1,6 @@
-from fastapi import APIRouter, Request, Depends
+from fastapi import APIRouter, Request
 from fastapi.responses import HTMLResponse
 from jinja2 import Environment, FileSystemLoader
-from motor.motor_asyncio import AsyncIOMotorClient
-from bson import ObjectId
 import os
 
 router = APIRouter()
@@ -10,134 +8,91 @@ router = APIRouter()
 # Set up Jinja2 environment
 templates = Environment(loader=FileSystemLoader('templates'))
 
-# MongoDB connection (using environment variable for MongoDB URL)
-# mongo_url = os.getenv("MONGO_URL", "mongodb://admin:admin@mongodb:27017")
-# client = AsyncIOMotorClient(mongo_url)
-# db = client['admin']
-# collection = db['content']
-
-# async def get_content(title: str):
-#     content = await collection.find_one({"title": title})
-#     return content
+# Helper function to render templates
+def render_template(template_name: str, request: Request):
+    template = templates.get_template(template_name)
+    return template.render(request=request)
 
 @router.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
-    # content = await get_content("Semiconductor Processing Overview")
-    # print("content", content)
-    template = templates.get_template('index.html')
-    return template.render(request=request)
-
+    return render_template('index.html', request)
 
 @router.get("/course_overview", response_class=HTMLResponse)
 async def read_course_overview(request: Request):
-    # content = await get_content("Course Overview")
-    template = templates.get_template('course_overview.html')
-    return template.render(request=request)
+    return render_template('course_overview.html', request)
 
 @router.get("/general_overview", response_class=HTMLResponse)
-async def read_course_overview(request: Request):
-    # content = await get_content("General Overview")
-    template = templates.get_template('general_overview.html')
-    return template.render(request=request)
-
-# @router.get("/general_overview/{chapter}", response_class=HTMLResponse)
-# async def read_general_overview_chapter(request: Request, chapter: str):
-#     content = await get_content("General Overview")
-#     chapter_content = next((ch for ch in content['chapters'] if ch['url'].endswith(chapter)), {})
-#     template = templates.get_template('general_overview.html')
-#     return template.render(request=request, content=chapter_content)
-
+async def read_general_overview(request: Request):
+    return render_template('general_overview.html', request)
 
 @router.get("/technical_overview", response_class=HTMLResponse)
 async def read_technical_overview(request: Request):
-    # content = await get_content("your_technical_overview_page_id_here")
-    template = templates.get_template('technical_overview.html')
-    return template.render(request=request)
+    return render_template('technical_overview.html', request)
 
 @router.get("/general_overview/introduction", response_class=HTMLResponse)
 async def read_introduction(request: Request):
-    # content = await get_content("Introduction")
-    template = templates.get_template('introduction.html')
-    return template.render(request=request)
-
+    return render_template('introduction.html', request)
 
 @router.get("/general_overview/introduction/objectives", response_class=HTMLResponse)
 async def read_objectives(request: Request):
-    # content = await get_content("Objectives")
-    template = templates.get_template('objectives.html')
-    return template.render(request=request)
+    return render_template('objectives.html', request)
 
 @router.get("/general_overview/introduction/electricity_electronics", response_class=HTMLResponse)
-async def read_objectives(request: Request):
-    template = templates.get_template('electricity_electronics.html')
-    return template.render(request=request)
+async def read_electricity_electronics(request: Request):
+    return render_template('electricity_electronics.html', request)
 
 @router.get("/general_overview/introduction/history_electronics", response_class=HTMLResponse)
-async def read_objectives(request: Request):
-    template = templates.get_template('history_electronics.html')
-    return template.render(request=request)
+async def read_history_electronics(request: Request):
+    return render_template('history_electronics.html', request)
 
 @router.get("/general_overview/introduction/vacuum_tubes", response_class=HTMLResponse)
-async def read_objectives(request: Request):
-    template = templates.get_template('vacuum_tubes.html')
-    return template.render(request=request)
+async def read_vacuum_tubes(request: Request):
+    return render_template('vacuum_tubes.html', request)
 
 @router.get("/general_overview/introduction/solid_state", response_class=HTMLResponse)
-async def read_objectives(request: Request):
-    template = templates.get_template('solid_state.html')
-    return template.render(request=request)
+async def read_solid_state(request: Request):
+    return render_template('solid_state.html', request)
 
 @router.get("/general_overview/introduction/integrated_circuits", response_class=HTMLResponse)
-async def read_objectives(request: Request):
-    template = templates.get_template('integrated_circuits.html')
-    return template.render(request=request)
+async def read_integrated_circuits(request: Request):
+    return render_template('integrated_circuits.html', request)
 
 @router.get("/general_overview/introduction/analog_and_digital", response_class=HTMLResponse)
-async def read_objectives(request: Request):
-    template = templates.get_template('analog_and_digital.html')
-    return template.render(request=request)
+async def read_analog_and_digital(request: Request):
+    return render_template('analog_and_digital.html', request)
 
 @router.get("/general_overview/introduction/binary_counting", response_class=HTMLResponse)
-async def read_objectives(request: Request):
-    template = templates.get_template('binary_counting.html')
-    return template.render(request=request)
+async def read_binary_counting(request: Request):
+    return render_template('binary_counting.html', request)
 
 @router.get("/general_overview/introduction/digital_logic", response_class=HTMLResponse)
-async def read_objectives(request: Request):
-    template = templates.get_template('digital_logic.html')
-    return template.render(request=request)
+async def read_digital_logic(request: Request):
+    return render_template('digital_logic.html', request)
 
 @router.get("/general_overview/introduction/integrated_circuit_development", response_class=HTMLResponse)
-async def read_objectives(request: Request):
-    template = templates.get_template('integrated_circuit_development.html')
-    return template.render(request=request)
+async def read_integrated_circuit_development(request: Request):
+    return render_template('integrated_circuit_development.html', request)
 
 @router.get("/general_overview/introduction/integrated_circuit_development2", response_class=HTMLResponse)
-async def read_objectives(request: Request):
-    template = templates.get_template('integrated_circuit_development2.html')
-    return template.render(request=request)
+async def read_integrated_circuit_development2(request: Request):
+    return render_template('integrated_circuit_development2.html', request)
 
 @router.get("/general_overview/introduction/small_scale_devices", response_class=HTMLResponse)
-async def read_objectives(request: Request):
-    template = templates.get_template('small_scale_devices.html')
-    return template.render(request=request)
+async def read_small_scale_devices(request: Request):
+    return render_template('small_scale_devices.html', request)
 
 @router.get("/general_overview/introduction/medium_scale_devices", response_class=HTMLResponse)
-async def read_objectives(request: Request):
-    template = templates.get_template('medium_scale_devices.html')
-    return template.render(request=request)
+async def read_medium_scale_devices(request: Request):
+    return render_template('medium_scale_devices.html', request)
 
 @router.get("/general_overview/introduction/large_scale_devices", response_class=HTMLResponse)
-async def read_objectives(request: Request):
-    template = templates.get_template('large_scale_devices.html')
-    return template.render(request=request)
+async def read_large_scale_devices(request: Request):
+    return render_template('large_scale_devices.html', request)
 
 @router.get("/general_overview/introduction/very_large_scale_devices", response_class=HTMLResponse)
-async def read_objectives(request: Request):
-    template = templates.get_template('very_large_scale_devices.html')
-    return template.render(request=request)
+async def read_very_large_scale_devices(request: Request):
+    return render_template('very_large_scale_devices.html', request)
 
 @router.get("/general_overview/introduction/ultra_large_scale_devices", response_class=HTMLResponse)
-async def read_objectives(request: Request):
-    template = templates.get_template('ultra_large_scale_devices.html')
-    return template.render(request=request)
+async def read_ultra_large_scale_devices(request: Request):
+    return render_template('ultra_large_scale_devices.html', request)
