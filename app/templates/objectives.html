@@ -10,104 +10,108 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #d3d3d3; /* Light grey background */
+            background-color: #f4f4f4;
             color: #333;
             margin: 0;
+            padding: 20px;
+            text-align: left;
         }
-
         .container {
-            display: flex;
-            flex-direction: row;
             max-width: 900px;
             margin: auto;
-            background: #e6e6e6; /* Light grey background for container */
-            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+            background: #ffffff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
             border-radius: 10px;
-            border: 2px solid #ccc; /* Border for the container */
+            border: 2px solid #e0e0e0;
+            padding: 20px;
             overflow: hidden;
         }
-
         .sidebar {
-            background-color: #a9a9a9; /* Dark grey color for high-tech look */
+            background-color: #3f51b5;
             color: white;
             padding: 20px;
-            border-right: 2px solid #ccc;
-            text-align: center;
-            font-weight: bold;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
             font-size: 20px;
+            flex-basis: 150px;
+            text-align: center;
+            border-radius: 10px 0 0 10px;
         }
-
         .main-content {
-            background-color: #ffffff;
             padding: 20px;
             flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            text-align: left;            
         }
-
-        .main-content h2 {
-            margin-top: 0;
-            font-size: 22px;
-            text-align: center;
-            color: #333;
+        .content-text h1 {
+            color: #3f51b5;
+            margin-bottom: 10px;
         }
-
-        .content-text {
-            text-align: left;
-            font-size: 16px;
+        .content-text strong {
+            color: #3f51b5;
+        }
+        .content-text p {
             line-height: 1.6;
+            margin: 10px 0;
+
+        }
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .button-container {
+            text-align: center;
             margin: 20px 0;
         }
-
-        .content-text ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .footer button {
-            margin: 5px;
-            background-color: #dcdcdc; /* Light grey buttons */
-            color: black;
-            border: 2px solid #a9a9a9; /* Dark grey border */
+        .button-container button {
+            background-color: #3f51b5;
+            color: white;
+            border: none;
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
-            font-weight: bold;
+            font-size: 16px;
+            margin-top: 10px;
         }
-
+        .button-container button:hover {
+            background-color: #303f9f;
+        }
+        .footer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer button {
+            background-color: #3f51b5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px 0;
+        }
         .footer button:hover {
-            background-color: #b0c4de; /* Light blue on hover */
+            background-color: #303f9f;
         }
-
+        .footer .page-number {
+            margin: 5px 0;
+        }
         .exit {
-            position: absolute;
-            top: 10px;
-            left: 10px;
+            margin-bottom: 20px;
+            text-align: right;
         }
-
         .exit button {
-            background-color: #dcdcdc; /* Light grey button */
-            color: black;
-            border: 2px solid #a9a9a9; /* Dark grey border */
+            background-color: #3f51b5;
+            color: white;
+            border: none;
             padding: 5px 10px;
             border-radius: 5px;
             cursor: pointer;
-            font-weight: bold;
+            font-size: 14px;
         }
-
         .exit button:hover {
-            background-color: #b0c4de; /* Light blue on hover */
+            background-color: #303f9f;
         }
     </style>
 </head>

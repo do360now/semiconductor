@@ -10,153 +10,114 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #d3d3d3; /* Light grey background */
+            background-color: #f4f4f4;
             color: #333;
             margin: 0;
+            padding: 20px;
+            text-align: left;
         }
-
         .container {
-            display: flex;
-            flex-direction: row;
             max-width: 900px;
             margin: auto;
-            background: #e6e6e6; /* Light grey background for container */
-            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+            background: #ffffff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
             border-radius: 10px;
-            border: 2px solid #ccc; /* Border for the container */
+            border: 2px solid #e0e0e0;
+            padding: 20px;
             overflow: hidden;
         }
-
         .sidebar {
-            background-color: #a9a9a9; /* Dark grey color for high-tech look */
+            background-color: #3f51b5;
             color: white;
             padding: 20px;
-            border-right: 2px solid #ccc;
-            text-align: center;
-            font-weight: bold;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
             font-size: 20px;
+            flex-basis: 150px;
+            text-align: center;
+            border-radius: 10px 0 0 10px;
         }
-
         .main-content {
-            background-color: #ffffff;
             padding: 20px;
             flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            text-align: left;            
         }
-
-        .content-text {
-            text-align: left;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
         .content-text h1 {
-            color: #8b0000; /* Dark red for heading */
-            font-size: 24px;
+            color: #3f51b5;
+            margin-bottom: 10px;
         }
-
         .content-text strong {
-            color: #8b0000; /* Dark red for strong text */
+            color: #3f51b5;
         }
+        .content-text p {
+            line-height: 1.6;
+            margin: 10px 0;
 
+        }
         .image-container {
-            text-align: center;
-            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Adjust as needed */
         }
-
         .image-container img {
             max-width: 100%;
-            height: auto;
-            border: 2px solid #ccc;
+            border-radius: 10px;
         }
-
         .button-container {
             text-align: center;
-            margin-top: 20px;
+            margin: 20px 0;
         }
-
         .button-container button {
-            background-color: #dcdcdc; /* Light grey button */
-            color: black;
-            border: 2px solid #a9a9a9; /* Dark grey border */
+            background-color: #3f51b5;
+            color: white;
+            border: none;
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
-            font-weight: bold;
+            font-size: 16px;
+            margin-top: 10px;
         }
-
         .button-container button:hover {
-            background-color: #b0c4de; /* Light blue on hover */
+            background-color: #303f9f;
         }
-
         .footer {
-            text-align: center;
             margin-top: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
-
         .footer button {
-            margin: 5px;
-            background-color: #dcdcdc; /* Light grey buttons */
-            color: black;
-            border: 2px solid #a9a9a9; /* Dark grey border */
+            background-color: #3f51b5;
+            color: white;
+            border: none;
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
-            font-weight: bold;
-        }
-
-        .footer button:hover {
-            background-color: #b0c4de; /* Light blue on hover */
-        }
-
-        .footer .page-number {
             font-size: 14px;
+            margin: 5px 0;
         }
-
+        .footer button:hover {
+            background-color: #303f9f;
+        }
+        .footer .page-number {
+            margin: 5px 0;
+        }
         .exit {
-            position: absolute;
-            top: 10px;
-            left: 10px;
+            margin-bottom: 20px;
+            text-align: right;
         }
-
         .exit button {
-            background-color: #dcdcdc; /* Light grey button */
-            color: black;
-            border: 2px solid #a9a9a9; /* Dark grey border */
+            background-color: #3f51b5;
+            color: white;
+            border: none;
             padding: 5px 10px;
             border-radius: 5px;
             cursor: pointer;
-            font-weight: bold;
+            font-size: 14px;
         }
-
         .exit button:hover {
-            background-color: #b0c4de; /* Light blue on hover */
+            background-color: #303f9f;
         }
-
-        .button-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        video {
-            width: 50%; /* Adjust size as needed */
-            height: auto;
-        }
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Centers the content horizontally in a flex container */
-            justify-content: center; /* Centers the content vertically in a flex container */
-            text-align: center;
-            margin-top: 20px;
-        }
-        
     </style>
 </head>
 <body>
@@ -192,14 +153,13 @@
             <div class="image-container">
                 <img src="/images/transistor.png" alt="Transistor">
             </div>
-            <div class="button-container">
-                <button>View an Event from the Transistor Era</button>
-            </div>
+           
             <div class="button-container">
                 <video id="tubeVideo" controls>
                     <source src="/videos/1950S.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <p></p>
                 <button onclick="toggleVideo()">View an Event from the Solid State Era</button>
             </div>
             <script>

@@ -9,6 +9,113 @@
     <title>General Overview</title>
     
 </head>
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+        text-align: left;
+    }
+    .container {
+        max-width: 900px;
+        margin: auto;
+        background: #ffffff;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        border: 2px solid #e0e0e0;
+        padding: 20px;
+        overflow: hidden;
+    }
+    .sidebar {
+        background-color: #3f51b5;
+        color: white;
+        padding: 20px;
+        font-size: 20px;
+        flex-basis: 150px;
+        text-align: center;
+        border-radius: 10px 0 0 10px;
+    }
+    .main-content {
+        padding: 20px;
+        flex-grow: 1;
+        text-align: left;            
+    }
+    .content-text h1 {
+        color: #3f51b5;
+        margin-bottom: 10px;
+    }
+    .content-text strong {
+        color: #3f51b5;
+    }
+    .content-text p {
+        line-height: 1.6;
+        margin: 10px 0;
+
+    }
+    .image-container img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    .button-container {
+        text-align: center;
+        margin: 20px 0;
+    }
+    .button-container button {
+        background-color: #3f51b5;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .button-container button:hover {
+        background-color: #303f9f;
+    }
+    .footer {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .footer button {
+        background-color: #3f51b5;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+    .footer button:hover {
+        background-color: #303f9f;
+    }
+    .footer .page-number {
+        margin: 5px 0;
+    }
+    .exit {
+        margin-bottom: 20px;
+        text-align: right;
+    }
+    .exit button {
+        background-color: #3f51b5;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .exit button:hover {
+        background-color: #303f9f;
+    }
+</style>
 <body>
     <div class="exit">
         <a href="/"><button>Home</button></a>
