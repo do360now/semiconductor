@@ -2,6 +2,7 @@ from fastapi import APIRouter, Request
 from fastapi.responses import HTMLResponse
 from jinja2 import Environment, FileSystemLoader
 import os
+import markdown
 
 router = APIRouter()
 
@@ -13,9 +14,30 @@ def render_template(template_name: str, request: Request):
     template = templates.get_template(template_name)
     return template.render(request=request)
 
+# Path to the .md file
+MD_FILE_PATH = "tech_overview.md"
+
+
+# Currently, the markdown content is read from a file and converted to HTML.  Not a lot of styling is applied to the HTML content.
+@router.get("/technical_overview", response_class=HTMLResponse)
+async def read_md_as_html():
+    with open(MD_FILE_PATH, "r") as md_file:
+        content = md_file.read()
+        # Convert markdown content to HTML
+        html_content = markdown.markdown(content)
+        return HTMLResponse(content=html_content)
+
 @router.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
     return render_template('index.html', request)
+
+@router.get("/about_spo", response_class=HTMLResponse)
+async def read_root(request: Request):
+    return render_template('about_spo.html', request)
+
+@router.get("/glossary", response_class=HTMLResponse)
+async def read_root(request: Request):
+    return render_template('glossary.html', request)
 
 @router.get("/course_overview", response_class=HTMLResponse)
 async def read_course_overview(request: Request):
@@ -60,6 +82,14 @@ async def read_integrated_circuits(request: Request):
 @router.get("/general_overview/introduction/analog_and_digital", response_class=HTMLResponse)
 async def read_analog_and_digital(request: Request):
     return render_template('analog_and_digital.html', request)
+
+@router.get("/general_overview/introduction/amplitude", response_class=HTMLResponse)
+async def read_analog_and_digital(request: Request):
+    return render_template('amplitude.html', request)
+
+@router.get("/general_overview/introduction/frequency", response_class=HTMLResponse)
+async def read_analog_and_digital(request: Request):
+    return render_template('frequency.html', request)
 
 @router.get("/general_overview/introduction/binary_counting", response_class=HTMLResponse)
 async def read_binary_counting(request: Request):

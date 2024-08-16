@@ -1,0 +1,193 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: left;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+    padding: 20px;
+    overflow: hidden;
+}
+.sidebar {
+    background-color: #0078D4;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    flex-basis: 150px;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
+}
+.main-content {
+    padding: 20px;
+    flex-grow: 1;
+    text-align: left;   
+    border: 2px solid #ccc;
+    border-radius: 0 0 10px 10px;         
+}
+.content-text h1 {
+    color: #005BB5;
+    margin-bottom: 10px;
+}
+.content-text strong {
+    color: #005BB5;
+}
+.content-text p {
+    line-height: 1.6;
+    margin: 10px 0;
+
+}
+.image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    align-items: center;
+    
+}
+.button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+.button-container button {
+    background-color: #0078D4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.button-container button:hover {
+    background-color: #005BB5;
+}
+
+.header {
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header button {
+    background-color: #0078D4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px 0;
+}
+.header button:hover {
+    background-color: #005BB5;
+}
+.header .page-number {
+    margin: 5px 0;
+}
+
+.footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer button {
+    background-color: #0078D4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px 0;
+}
+.footer button:hover {
+    background-color: #005BB5;
+}
+.footer .page-number {
+    margin: 5px 0;
+}
+
+.exit {
+    margin-bottom: 20px;
+    text-align: right;
+}
+.exit button {
+    background-color: #0078D4;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.exit button:hover {
+    background-color: #005BB5;
+}
+
+.section {
+    margin-bottom: 20px; /* Adjust this value as needed */
+}
+
+.course-resources {
+    margin-top: 40px; /* Add additional space above this section */
+}
+
+.menu-buttons2 {
+    text-align: left;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+    
+}
+
+.menu-buttons2 a {
+    display: block;
+    width: 100%;
+}
+
+.menu-buttons2 h2 {
+    text-align: left;
+    font-weight: bold;
+}
+
+.menu-buttons2 button {
+    background-color: #dcdcdc; /* Light grey buttons */
+    color: black;
+    border: 2px solid #a9a9a9; /* Dark grey border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+}
+
+.menu-buttons2 button:hover {
+    background-color: #b0c4de; /* Light blue on hover */
+}
+
+.spacer {
+    height: 40px; /* Adjust this value to increase/decrease space */
+}
+
+.btc p {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}

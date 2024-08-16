@@ -3,123 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/images/goldenwafers.png">
+    <link rel="stylesheet" href="/static/styles2.css">
+    <link rel="icon" href="/images/favicon2.png">
     <title>General Overview</title>
     
 </head>
-<style>
-    body {
-        font-family: 'Roboto', sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
-        margin: 0;
-        padding: 20px;
-        text-align: left;
-    }
-    .container {
-        max-width: 900px;
-        margin: auto;
-        background: #ffffff;
-        box-shadow: 0 0 15px rgba(0,0,0,0.1);
-        border-radius: 10px;
-        border: 2px solid #e0e0e0;
-        padding: 20px;
-        overflow: hidden;
-    }
-    .sidebar {
-        background-color: #3f51b5;
-        color: white;
-        padding: 20px;
-        font-size: 20px;
-        flex-basis: 150px;
-        text-align: center;
-        border-radius: 10px 0 0 10px;
-    }
-    .main-content {
-        padding: 20px;
-        flex-grow: 1;
-        text-align: left;            
-    }
-    .content-text h1 {
-        color: #3f51b5;
-        margin-bottom: 10px;
-    }
-    .content-text strong {
-        color: #3f51b5;
-    }
-    .content-text p {
-        line-height: 1.6;
-        margin: 10px 0;
-
-    }
-    .image-container img {
-        max-width: 100%;
-        border-radius: 10px;
-        margin-top: 20px;
-    }
-    .button-container {
-        text-align: center;
-        margin: 20px 0;
-    }
-    .button-container button {
-        background-color: #3f51b5;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        margin-top: 10px;
-    }
-    .button-container button:hover {
-        background-color: #303f9f;
-    }
-    .footer {
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .footer button {
-        background-color: #3f51b5;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 14px;
-        margin: 5px 0;
-    }
-    .footer button:hover {
-        background-color: #303f9f;
-    }
-    .footer .page-number {
-        margin: 5px 0;
-    }
-    .exit {
-        margin-bottom: 20px;
-        text-align: right;
-    }
-    .exit button {
-        background-color: #3f51b5;
-        color: white;
-        border: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 14px;
-    }
-    .exit button:hover {
-        background-color: #303f9f;
-    }
-</style>
 <body>
-    <div class="exit">
-        <a href="/"><button>Home</button></a>
-    </div>
     <div class="container">
         <div class="sidebar">
             <h1>General Overview</h1>
@@ -127,16 +16,17 @@
         <div class="main-content">
             <h3>Table of Contents</h3>
             <h4>Please Select from the Chapter List</h4>
-            <div class="menu-buttons">
+            <div class="menu-buttons2">
                 <a href="/general_overview/introduction"><button>Chapter 1: Introduction</button></a>
-                <a href="/general_overview/measurements"><button>Chapter 2: Semiconductor Processing Measurements</button></a>
-                <a href="/general_overview/material"><button>Chapter 3: Principles of Semiconductor Material</button></a>
-                <a href="/general_overview/fabrication"><button>Chapter 4: Integrated Circuit Fabrication</button></a>
-                <a href="/general_overview/fundamentals"><button>Chapter 5: Solid-state Device Fundamentals</button></a>
+                <p>More chapters coming soon...</p>
+                <!-- <a href="/general_overview/measurements"><button>Chapter 2: Semiconductor Processing Measurements</button></a> TODO -->
+                <!-- <a href="/general_overview/material"><button>Chapter 3: Principles of Semiconductor Material</button></a> TODO -->
+                <!-- <a href="/general_overview/fabrication"><button>Chapter 4: Integrated Circuit Fabrication</button></a> TODO -->
+                <!-- <a href="/general_overview/fundamentals"><button>Chapter 5: Solid-state Device Fundamentals</button></a> TODO -->
             </div>
             <div class="footer">
                 <a href="/"><button>Main Menu</button></a>
-                <button>Glossary</button>
+                <a href="/glossary"><a href="/glossary"><button>Glossary</button></a></a>
             </div>
         </div>
     </div>

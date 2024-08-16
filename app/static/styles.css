@@ -47,8 +47,18 @@ body {
 }
 
 .menu-buttons a {
-    display: block;
+    display: block; /* Ensure the buttons are stacked vertically */
+    margin-bottom: 10px; /* Add space between the buttons */
     width: 100%;
+}
+
+.menu-buttons a {
+    display: block; /* Ensure the buttons are stacked vertically */
+    margin-bottom: 10px; /* Add space between the buttons */
+}
+
+.menu-buttons a:last-child {
+    margin-bottom: 0; /* Remove margin from the last button to avoid extra space */
 }
 
 .menu-buttons button {

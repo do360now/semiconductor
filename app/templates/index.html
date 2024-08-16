@@ -3,142 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/images/wafers.png">
+    <link rel="stylesheet" href="/static/styles2.css">
+    <link rel="icon" href="/images/favicon2.png">
     <title>Semiconductor Processing Overview</title>
 </head>
-   
-<style>
-    body {
-        font-family: 'Roboto', sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
-        margin: 0;
-        padding: 20px;
-        text-align: left;
-    }
-    .container {
-        max-width: 900px;
-        margin: auto;
-        background: #ffffff;
-        box-shadow: 0 0 15px rgba(0,0,0,0.1);
-        border-radius: 10px;
-        border: 2px solid #e0e0e0;
-        padding: 20px;
-        overflow: hidden;
-    }
-    .sidebar {
-        background-color: #3f51b5;
-        color: white;
-        padding: 20px;
-        font-size: 20px;
-        flex-basis: 150px;
-        text-align: center;
-        border-radius: 10px 0 0 10px;
-    }
-    .main-content {
-        padding: 20px;
-        flex-grow: 1;
-        text-align: left;            
-    }
-    .content-text h1 {
-        color: #3f51b5;
-        margin-bottom: 10px;
-    }
-    .content-text strong {
-        color: #3f51b5;
-    }
-    .content-text p {
-        line-height: 1.6;
-        margin: 10px 0;
 
-    }
-    .image-container img {
-        max-width: 100%;
-        border-radius: 10px;
-        margin-top: 20px;
-        align-items: center;
-        
-    }
-    .button-container {
-        text-align: center;
-        margin: 20px 0;
-    }
-    .button-container button {
-        background-color: #3f51b5;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        margin-top: 10px;
-    }
-    .button-container button:hover {
-        background-color: #303f9f;
-    }
-    .footer {
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .footer button {
-        background-color: #3f51b5;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 14px;
-        margin: 5px 0;
-    }
-    .footer button:hover {
-        background-color: #303f9f;
-    }
-    .footer .page-number {
-        margin: 5px 0;
-    }
-    .exit {
-        margin-bottom: 20px;
-        text-align: right;
-    }
-    .exit button {
-        background-color: #3f51b5;
-        color: white;
-        border: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 14px;
-    }
-    .exit button:hover {
-        background-color: #303f9f;
-    }
-</style>
 <body>
     <div class="container">
         <div class="sidebar">
-            <h1>Semiconductor Processing Overview</h1>
+            <h1>Semiconductors Processing Overview</h1>
+            <p>Welcome to the Semiconductor Processing Overview. Start your journey into the world of semiconductor technology by choosing from the modules below.</p>
         </div>
+
+        <div class="image-container">
+            <img src="/images/index.png" alt="Semiconductor Processing Overview" style="margin-top: 20px;">
+        </div>
+        <div class="button-container">
+            <a href="/general_overview"><button>Start Learning</button></a>
+        </div>
+
         <div class="main-content">
-            <h2>Main Menu</h2>
-            <div class="menu-buttons">
-                <a href="/course_overview"><button>Course Overview</button></a>
-                <a href="/general_overview"><button>General Overview</button></a>
-                <a href="/technical_overview"><button>Technical Overview</button></a>
+            <div class="header">
+                <a href="/about_spo"><button>About SPO</button></a>
+            </div>
+            <h2>Main Menu:</h2>
+            <div class="menu-buttons2">
+                <h2>Learning Modules:</h2>
+                <a href="/general_overview"><button>General Overview: Gain a foundational understanding of semiconductor processes and industry applications.</button></a>
+                <a href="/technical_overview"><button>Technical Overview: Dive deeper into the technical aspects of semiconductor device fabrication and materials science.</button></a>
             </div>
             
-            <div class="image-container">
-                <img src="/images/index.png" alt="Semiconductor Processing Overview">
+                <div class="spacer"></div> <!-- This div acts as a spacer -->
+
+            <div class="menu-buttons2">
+                <h2>Course Resources:</h2>
+                <a href="/course_overview"><button>Course Overview: Understand the course structure and explore key learning objectives.</button></a>
+                <a href="/glossary"><button>Glossary: Access a comprehensive glossary of terms used throughout the course.</button></a>
             </div>
-            
-        </div>
-        <div class="footer">
-            <button>Glossary</button>
-            <button>About SPO</button>
+            </div>
         </div>
     </div>
 </body>

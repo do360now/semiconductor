@@ -3,127 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/styles2.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/images/goldenwafers.png">
+    <link rel="icon" href="/images/favicon2.png">
     <title>Solid State</title>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            text-align: left;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: #ffffff;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            border-radius: 10px;
-            border: 2px solid #e0e0e0;
-            padding: 20px;
-            overflow: hidden;
-        }
-        .sidebar {
-            background-color: #3f51b5;
-            color: white;
-            padding: 20px;
-            font-size: 20px;
-            flex-basis: 150px;
-            text-align: center;
-            border-radius: 10px 0 0 10px;
-        }
-        .main-content {
-            padding: 20px;
-            flex-grow: 1;
-            text-align: left;            
-        }
-        .content-text h1 {
-            color: #3f51b5;
-            margin-bottom: 10px;
-        }
-        .content-text strong {
-            color: #3f51b5;
-        }
-        .content-text p {
-            line-height: 1.6;
-            margin: 10px 0;
-
-        }
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Adjust as needed */
-        }
-        .image-container img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-        .button-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .button-container button {
-            background-color: #3f51b5;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 10px;
-        }
-        .button-container button:hover {
-            background-color: #303f9f;
-        }
-        .footer {
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .footer button {
-            background-color: #3f51b5;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            margin: 5px 0;
-        }
-        .footer button:hover {
-            background-color: #303f9f;
-        }
-        .footer .page-number {
-            margin: 5px 0;
-        }
-        .exit {
-            margin-bottom: 20px;
-            text-align: right;
-        }
-        .exit button {
-            background-color: #3f51b5;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-        .exit button:hover {
-            background-color: #303f9f;
-        }
-    </style>
 </head>
 <body>
-    <div class="exit">
-        <a href="/"><button>Home</button></a>
-    </div>
     <div class="container">
         <div class="sidebar">
             INTRODUCTION
@@ -133,51 +18,34 @@
                 <h1>Solid State Technology</h1>
                 <p>The advent of reliable semiconductor-based electronic devices has significantly impacted our lives. Today, we often take for granted the tiny, powerful, and inexpensive electronic gadgets that have become integral to our daily routines. However, this wasn't always the case.</p>
                 <p>Prior to the 1950s, electronic devices relied on vacuum tubes, which were large, fragile, and power-hungry. Moreover, they were notoriously unreliable. The introduction of transistors marked a revolutionary change. As the first solid-state electronic devices, transistors were smaller, more reliable, and required far less power. This innovation laid the groundwork for the modern electronics industry.</p>
-                <p>Transistors were pivotal in developing the integrated circuit, the fundamental building block of all modern electronic devices. Thanks to integrated circuits, electronic devices today are not only compact and powerful but also remarkably affordable. These advancements are what enable technologies such as the Internet, smartphones, and much more.</p>
+                <p>Transistors were pivotal in developing the integrated circuit, the fundamental building block of all modern electronic devices. Thanks to integrated circuits, electronic devices today are not only compact and powerful but also remarkably affordable. These advancements are what enable technologies such as the Internet, smartphones, and now A.I...</p>
                 <p>But it all began with the transistor. Let’s delve deeper into the transistor era:</p>
                 <ul>
                     <li>What was it like?</li>
                     <li>What were the key events and technologies?</li>
                 </ul>
                 <p>Explore these questions by clicking the buttons below to navigate through the transistor era.</p>
-                <div class="navigation">
-                    <button onclick="location.href='event.html';">View Event</button>
-                    <button onclick="history.back();">Back</button>
-                    <button onclick="location.href='glossary.html';">Glossary</button>
-                    <button onclick="location.href='next.html';">Next</button>
-                </div>
                 <p>Enjoy the journey, and remember, the transistor era was just the beginning. There is much more to explore and discover. Stay tuned!</p>
                 <p>By the 1950s, the limitations of vacuum tube technology had become apparent. A new, more reliable type of component was necessary. In 1947, scientists at Bell Laboratories demonstrated a groundbreaking device: a solid-state amplifier made from germanium. This device, known as the transistor, offered the same functionality as a vacuum tube but was significantly smaller, more reliable, and consumed less power.</p>
                 <p>The 1950s thus became known as the age of the transistor.</p>
             </div>
             <div class="image-container">
-                <img src="/images/transistor.png" alt="Transistor">
             </div>
-           
             <div class="button-container">
+                <a href = "https://en.wikipedia.org/wiki/Transistor" target="_blank"><img src="/images/first_transistor.png" alt="Transistor">
+                </a>
                 <video id="tubeVideo" controls>
                     <source src="/videos/1950S.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <p></p>
-                <button onclick="toggleVideo()">View an Event from the Solid State Era</button>
             </div>
-            <script>
-                function toggleVideo() {
-                    var video = document.getElementById('tubeVideo');
-                    if (video.paused) {
-                        video.play();
-                    } else {
-                        video.pause();
-                    }
-                }
-            </script>
             <div class="footer">
-                <button onclick="history.back();">Back</button>
-                <button>Glossary</button>
-                <div class="page-number">Page 6 of 15</div>
-                <a href="/general_overview/introduction/vacuum_tubes"><button>&#9664;</button></a>
-                <a href="/general_overview/introduction/integrated_circuits"><button>&#9654;</button></a>
+                <a href="/general_overview/introduction/history_electronics"><button>Back</button></a>
+                <a href="/glossary"><button>Glossary</button></a>
+                <div class="page-number">Page 6 of 16</div>
+                <a href="/"><button>Home</button></a>
+                <a href="/general_overview/introduction/integrated_circuits"><button>Next</button></a>
             </div>
             </div>
         </div>

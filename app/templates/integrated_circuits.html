@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/images/goldenwafers.png">
+    <link rel="icon" href="/images/favicon2.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.css">
+
     <title>Integrated Circuits</title>
     <style>
         body {
@@ -27,7 +30,7 @@
             overflow: hidden;
         }
         .sidebar {
-            background-color: #3f51b5;
+            background-color: #0078D4;
             color: white;
             padding: 20px;
             font-size: 20px;
@@ -62,7 +65,7 @@
             margin: 20px 0;
         }
         .button-container button {
-            background-color: #3f51b5;
+            background-color: #0078D4;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -72,7 +75,7 @@
             margin-top: 10px;
         }
         .button-container button:hover {
-            background-color: #303f9f;
+            background-color: #005BB5;
         }
         .footer {
             margin-top: 20px;
@@ -82,7 +85,7 @@
             flex-wrap: wrap;
         }
         .footer button {
-            background-color: #3f51b5;
+            background-color: #0078D4;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -92,7 +95,7 @@
             margin: 5px 0;
         }
         .footer button:hover {
-            background-color: #303f9f;
+            background-color: #005BB5;
         }
         .footer .page-number {
             margin: 5px 0;
@@ -102,7 +105,7 @@
             text-align: right;
         }
         .exit button {
-            background-color: #3f51b5;
+            background-color: #0078D4;
             color: white;
             border: none;
             padding: 5px 10px;
@@ -111,74 +114,97 @@
             font-size: 14px;
         }
         .exit button:hover {
-            background-color: #303f9f;
+            background-color: #005BB5;
         }
     </style>
 </head>
 <body>
-    <div class="exit">
-        <a href="/"><button>Home</button></a>
-    </div>
-    <div class="container">
+      <div class="container">
         <div class="sidebar">
             INTRODUCTION
         </div>
         <div class="main-content">
             <div class="content-text">
-                <h1>Integrated Circuits</h1>
-                <p>As the 1950's drew to a close, electronic devices built by connecting individual transistors, and other discrete devices were again testing the limits of technology.</p>
-                <p>Circuits had become so complex that size, heat dissipation, and even wiring the pieces together was a problem.</p>
-                <p>In 1959 scientists developed a solution, the integrated circuit.</p>
-                <p>This device replaced many discrete devices with a single miniature "chip".</p>
-                <p>On the chip were tiny transistors and all the interconnects necessary.</p>
-                <p>Integrated circuits offered several advantages:</p>
-                <ul>
-                    <li>They were smaller and lighter than discrete devices.</li>
-                    <li>They were more reliable because there were fewer connections to fail.</li>
-                    <li>They were cheaper to manufacture.</li>
-                    <li>They consumed less power.</li>
-                </ul>
-                <p>Integrated circuits were the foundation of the modern electronics industry.</p>
-                <p>They made possible the development of the microprocessor, which is the "brain" of a computer.</p>
-                <p>Today, integrated circuits are found in almost every electronic device.</p>
-                <p>Integrated circuits are also known as microchips or chips.</p>
-                <p>Integrated circuits are made by "printing" the circuit pattern on a silicon wafer.</p>
-                <p>Each wafer contains hundreds of chips.</p>
-                <p>After the chips are printed, the wafer is cut into individual chips.</p>
-                <p>Each chip is then tested to ensure that it works properly.</p>
-                <p>Defective chips are discarded.</p>
-                <p>Good chips are packaged in plastic or ceramic cases.</p>
-                <p>The case protects the chip and provides electrical connections to the outside world.</p>
-                <p>Integrated circuits are classified by the number of transistors they contain.</p>
-                <p>There are several categories of integrated circuits:</p>
+                <h2>Integrated Circuits</h2>
+
+<p>As the 1950s drew to a close, electronic devices constructed using individual transistors and other discrete components were reaching the limits of technological capabilities.</p>
+
+<p>Circuits had become so complex that size, heat dissipation, and even wiring the pieces together were significant challenges.</p>
+
+<p>In 1959, scientists developed a solution: the integrated circuit.</p>
+
+<p>This device replaced many discrete components with a single miniature "chip."</p>
+
+<p>On the chip were tiny transistors and all the interconnections necessary.</p>
+
+<h3>Integrated circuits offered several advantages:</h3>
+<ul>
+    <li>They were smaller and lighter than discrete devices.</li>
+    <li>They were more reliable because there were fewer connections to fail.</li>
+    <li>They were cheaper to manufacture.</li>
+    <li>They consumed less power.</li>
+</ul>
+
+<p>Integrated circuits became the foundation of the modern electronics industry.</p>
+
+<p>They enabled the development of the microprocessor, the "brain" of a computer.</p>
+
+<p>Today, integrated circuits are found in almost every electronic device.</p>
+
+<p>Integrated circuits are also known as microchips or chips.</p>
+
+<h3>How Integrated Circuits Are Made:</h3>
+<ul>
+    <li>Integrated circuits are made by "printing" the circuit pattern on a silicon wafer.</li>
+    <li>Each wafer contains hundreds of chips.</li>
+    <li>After the chips are printed, the wafer is cut into individual chips.</li>
+    <li>Each chip is then tested to ensure that it works properly.</li>
+    <li>Defective chips are discarded.</li>
+    <li>Good chips are packaged in plastic or ceramic cases.</li>
+    <li>The case protects the chip and provides electrical connections to the outside world.</li>
+</ul>
+<p>Integrated circuits are classified by the number of transistors they contain. There are several categories of integrated circuits:</p>
             </div>
-            <div class="image-container">
-                <img src="/images/IC.png" alt="Integrated Circuit">
+            <div id="openseadragon-container" style="width: 800px; height: 600px;"></div>
+
+            <div id="controls">
+                <button id="zoom-in">Zoom In</button>
+                <button id="zoom-out">Zoom Out</button>
+                <button id="home">Reset</button>
+                <button id="full-page">Full Page</button>
             </div>
+        
+            <script>
+                var viewer = OpenSeadragon({
+                    id: "openseadragon-container",
+                    prefixUrl: "https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/images/",
+                    tileSources: {
+                        type: 'image',
+                        url: '/images/internal_view.png'
+                    },
+                    showNavigator: true,
+                    minZoomLevel: 0.5,
+                    defaultZoomLevel: 1,
+                    maxZoomLevel: 10,
+                    zoomInButton: "zoom-in",
+                    zoomOutButton: "zoom-out",
+                    homeButton: "home",
+                    fullPageButton: "full-page",
+                });
+            </script>
             <div class="button-container">
                 <video id="tubeVideo" controls style="width: 100%; height: auto;">
                     <source src="/videos/1960S.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <button onclick="toggleVideo()">View an Event from the Integrated Circuit Era</button>
             </div>
-            <script>
-                function toggleVideo() {
-                    var video = document.getElementById('tubeVideo');
-                    if (video.paused) {
-                        video.play();
-                    } else {
-                        video.pause();
-                    }
-                }
-            </script>
         </div>
         <div class="footer">
-            <a href="/general_overview/history_electronics"><button>Back</button></a>
-            <button>Glossary</button>
-            <div class="page-number">Page 7 of 15</div>
-            <a href="/general_overview/introduction/solid_state"><button>&#9664;</button></a>
-            <a href="/general_overview/introduction/analog_and_digital"><button>&#9654;</button></a>
+            <a href="/general_overview/introduction/history_electronics"><button>Back</button></a>
+            <a href="/glossary"><button>Glossary</button></a>
+            <div class="page-number">Page 7 of 16</div>
+            <a href="/"><button>Home</button></a>
+            <a href="/general_overview/introduction/analog_and_digital"><button>Next</button></a>
         </div>
     </div>
 </body>

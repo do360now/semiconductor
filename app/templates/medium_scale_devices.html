@@ -5,146 +5,195 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/images/goldenwafers.png">
+    <link rel="icon" href="/images/favicon2.png">
     <title>Medium Scale Devices</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #d3d3d3; /* Light grey background */
+            background-color: #f4f4f4;
             color: #333;
             margin: 0;
+            padding: 20px;
+            text-align: left;
         }
-
         .container {
-            display: flex;
-            flex-direction: row;
             max-width: 900px;
             margin: auto;
-            background: #e6e6e6; /* Light grey background for container */
-            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+            background: #ffffff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
             border-radius: 10px;
-            border: 2px solid #ccc; /* Border for the container */
+            border: 2px solid #e0e0e0;
+            padding: 20px;
             overflow: hidden;
         }
-
         .sidebar {
-            background-color: #a9a9a9; /* Dark grey color for high-tech look */
+            background-color: #0078D4;
             color: white;
             padding: 20px;
-            border-right: 2px solid #ccc;
-            text-align: center;
-            font-weight: bold;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
             font-size: 20px;
+            flex-basis: 150px;
+            text-align: center;
+            border-radius: 10px 0 0 10px;
         }
-
         .main-content {
-            background-color: #ffffff;
             padding: 20px;
             flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            text-align: left;            
         }
-
-        .content-text {
-            text-align: left;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
         .content-text h1 {
-            color: #8b0000; /* Dark red for heading */
-            font-size: 24px;
+            color: #3f51b5;
+            margin-bottom: 10px;
         }
-
         .content-text strong {
-            color: #8b0000; /* Dark red for strong text */
+            color: #3f51b5;
         }
-
-        .image-container {
-            text-align: center;
-            margin-top: 20px;
+        .content-text p {
+            line-height: 1.6;
+            margin: 10px 0;
+    
         }
-
         .image-container img {
             max-width: 100%;
-            height: auto;
-            border: 2px solid #ccc;
+            border-radius: 10px;
+            margin-top: 20px;
+            align-items: center;
+            
         }
-
         .button-container {
             text-align: center;
-            margin-top: 20px;
+            margin: 20px 0;
         }
-
         .button-container button {
-            background-color: #dcdcdc; /* Light grey button */
-            color: black;
-            border: 2px solid #a9a9a9; /* Dark grey border */
+            background-color: #0078D4;
+            color: white;
+            border: none;
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
-            font-weight: bold;
+            font-size: 16px;
+            margin-top: 10px;
         }
-
         .button-container button:hover {
-            background-color: #b0c4de; /* Light blue on hover */
+            background-color: #005BB5;
         }
-
+    
+        .header {
+            margin-top: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .header button {
+            background-color: #0078D4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .header button:hover {
+            background-color: #005BB5;
+        }
+        .header .page-number {
+            margin: 5px 0;
+        }
+    
         .footer {
-            text-align: center;
             margin-top: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
-
         .footer button {
-            margin: 5px;
+            background-color: #0078D4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .footer button:hover {
+            background-color: #005BB5;
+        }
+        .footer .page-number {
+            margin: 5px 0;
+        }
+    
+        .exit {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+        .exit button {
+            background-color: #0078D4;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .exit button:hover {
+            background-color: #005BB5;
+        }
+    
+        .section {
+            margin-bottom: 20px; /* Adjust this value as needed */
+        }
+        
+        .course-resources {
+            margin-top: 40px; /* Add additional space above this section */
+        }
+    
+        .menu-buttons2 {
+            text-align: left;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            gap: 10px;
+            
+        }
+        
+        .menu-buttons2 a {
+            display: block;
+            width: 100%;
+        }
+    
+        .menu-buttons2 h2 {
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .menu-buttons2 button {
             background-color: #dcdcdc; /* Light grey buttons */
             color: black;
             border: 2px solid #a9a9a9; /* Dark grey border */
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
+            width: 100%;
+            text-align: left;
             font-weight: bold;
         }
-
-        .footer button:hover {
+        
+        .menu-buttons2 button:hover {
             background-color: #b0c4de; /* Light blue on hover */
         }
-
-        .footer .page-number {
-            font-size: 14px;
+    
+        .spacer {
+            height: 40px; /* Adjust this value to increase/decrease space */
         }
-
-        .exit {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-        }
-
-        .exit button {
-            background-color: #dcdcdc; /* Light grey button */
-            color: black;
-            border: 2px solid #a9a9a9; /* Dark grey border */
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .exit button:hover {
-            background-color: #b0c4de; /* Light blue on hover */
-        }
+        
     </style>
 </head>
 <body>
-    <div class="exit">
-        <a href="/"><button>Home</button></a>
-    </div>
+   
     <div class="container">
         <div class="sidebar">
             INTRODUCTION
@@ -158,16 +207,17 @@
                 <img src="/images/keyboard.png" alt="Medium Scale Device">
             </div>
             <div class="footer">
-                <a href="/general_overview"><button>Back</button></a>
-                <a href="/general_overview/introduction/large_scale_devices"><button>Next</button></a>
-                <a href="/general_overview/introduction/small_scale_devices"><button>Previous</button></a>
-                <a href="/glossary"><button>Glossary</button></a>
-                <div class="page-number">Page 13 of 15</div>
-                <a href="/general_overview/introduction/large_scale_devices"><button>&#9664;</button></a>
+                <a href="/general_overview/introduction/integrated_circuit_development"><button>Back</button></a>
+                
+               
+                <a href="/"><a href="/glossary"><button>Glossary</button></a></a>
+                <div class="page-number">Page 13 of 16</div>
                 <a href="/general_overview/introduction/small_scale_devices"><button>&#9664;</button></a>
+                <a href="/"><button>Home</button></a>
+                <a href="/general_overview/introduction/large_scale_devices"><button>Next</button></a>
             </div>
         </div>
-                <button>Glossary</button>
+       
             </div>
         </div>
     </div>
