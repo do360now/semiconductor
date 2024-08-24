@@ -8,7 +8,6 @@
     <title>Ultra Large Scale Devices</title>
 </head>
 <body>
-  
     <div class="container">
         <div class="sidebar">
             INTRODUCTION
@@ -29,10 +28,64 @@
                 <a href="/general_overview/introduction/integrated_circuit_development"><button>Back</button></a>
                 <a href="/glossary"><button>Glossary</button></a>
                 <div class="page-number">Page 16 of 16</div>
-                <a href="/general_overview/introduction/very_large_scale_devices"><button>&#9664;</button></a>
                 <a href="/"><button>Home</button></a>
+                <a href="#" id="openModal"><button>Next</button></a>
             </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>You have reached the end of the chapter.<br>*** Please select from the following options ***</p>
+        <a href="/general_overview/introduction/chapter_review_introduction"><button>Take Chapter Review Quiz</button></a>
+        <a href="/general_overview/measurements"><button>Go To Next Chapter in this Course</button></a>
+        <a href="/general_overview/introduction"><button>Go To Index for This Chapter</button></a>
+        <a href="/general_overview"><button>Go To Table of Contents for This Course</button></a>
+        <a href="/"><button>Go To Main Menu</button></a>
+        <button>CANCEL</button>
         </div>
     </div>
+  
+  <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+  
+      // Get the link that opens the modal
+      var link = document.getElementById("openModal");
+  
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+  
+      // When the user clicks on the link, open the modal
+      link.onclick = function() {
+          modal.style.display = "block";
+          return false; // Prevent default action of the link
+      }
+  
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+  
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+  
+      // Close the modal when any button is clicked
+      var buttons = document.querySelectorAll('.modal-content button');
+      buttons.forEach(function(button) {
+          button.onclick = function() {
+              modal.style.display = "none";
+          }
+      });
+  </script>
+
+</div>
+</div>
 </body>
 </html>

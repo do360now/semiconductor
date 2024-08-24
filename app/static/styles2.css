@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 20px;
     text-align: left;
+    
 }
 .container {
     max-width: 900px;
@@ -16,6 +17,7 @@ body {
     border: 2px solid #e0e0e0;
     padding: 20px;
     overflow: hidden;
+    
 }
 .sidebar {
     background-color: #0078D4;
@@ -24,14 +26,15 @@ body {
     font-size: 20px;
     flex-basis: 150px;
     text-align: center;
-    border-radius: 10px 0 0 10px;
+    border-radius: 10px;
 }
 .main-content {
     padding: 20px;
     flex-grow: 1;
     text-align: left;   
     border: 2px solid #ccc;
-    border-radius: 0 0 10px 10px;         
+    border-radius: 10px;  
+    margin-top: 20px;
 }
 .content-text h1 {
     color: #005BB5;
@@ -190,4 +193,149 @@ body {
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
+}
+
+ /* Modal container */
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 2px solid #888;
+    width: 300px; /* Could be more or less, depending on screen size */
+    text-align: center;
+    flex-grow: 1;
+    border-radius: 10px;  
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Button styling */
+.modal-content button {
+    background-color: #dcdcdc; /* Light grey buttons */
+    color: black;
+    border: 2px solid #a9a9a9; /* Dark grey border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+}
+
+.modal-content button:hover {
+    background-color: #b0c4de; /* Light blue on hover */
+}
+
+/* Modal header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Modal body */
+.modal-body {
+    padding: 2px 16px;
+}
+
+/* Modal footer */
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Modal footer button */
+.modal-footer button {
+    background-color: #dcdcdc; /* Light grey buttons */
+    color: black;
+    border: 2px solid #a9a9a9; /* Dark grey border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+}
+
+.modal-footer button:hover {
+    background-color: #b0c4de; /* Light blue on hover */
+}
+
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.counter input {
+    width: 40px;
+    height: 30px;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.binary-display {
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+    margin: 10px 0;
+}
+
+.switches {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.switch {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    background-color: red;
+    border: 2px solid #a9a9a9;
+    border-radius: 5px;
+}
+
+.switch.on {
+    background-color: green;
 }

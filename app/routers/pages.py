@@ -127,3 +127,6 @@ async def read_very_large_scale_devices(request: Request):
 async def read_ultra_large_scale_devices(request: Request):
     return render_template('ultra_large_scale_devices.html', request)
 
+@router.get("/general_overview/introduction/chapter_review_introduction", response_class=HTMLResponse)
+async def read_ultra_large_scale_devices(request: Request):
+    return render_template('chapter_review_introduction.html', request)

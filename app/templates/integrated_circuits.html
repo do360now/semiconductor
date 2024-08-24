@@ -3,120 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles2.css">
     <link rel="icon" href="/images/favicon2.png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.css">
 
     <title>Integrated Circuits</title>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            text-align: left;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: #ffffff;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            border-radius: 10px;
-            border: 2px solid #e0e0e0;
-            padding: 20px;
-            overflow: hidden;
-        }
-        .sidebar {
-            background-color: #0078D4;
-            color: white;
-            padding: 20px;
-            font-size: 20px;
-            flex-basis: 150px;
-            text-align: center;
-            border-radius: 10px 0 0 10px;
-        }
-        .main-content {
-            padding: 20px;
-            flex-grow: 1;
-            text-align: left;            
-        }
-        .content-text h1 {
-            color: #3f51b5;
-            margin-bottom: 10px;
-        }
-        .content-text strong {
-            color: #3f51b5;
-        }
-        .content-text p {
-            line-height: 1.6;
-            margin: 10px 0;
-
-        }
-        .image-container img {
-            max-width: 100%;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-        .button-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .button-container button {
-            background-color: #0078D4;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 10px;
-        }
-        .button-container button:hover {
-            background-color: #005BB5;
-        }
-        .footer {
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .footer button {
-            background-color: #0078D4;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            margin: 5px 0;
-        }
-        .footer button:hover {
-            background-color: #005BB5;
-        }
-        .footer .page-number {
-            margin: 5px 0;
-        }
-        .exit {
-            margin-bottom: 20px;
-            text-align: right;
-        }
-        .exit button {
-            background-color: #0078D4;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-        .exit button:hover {
-            background-color: #005BB5;
-        }
-    </style>
 </head>
 <body>
       <div class="container">
@@ -163,9 +53,9 @@
     <li>Good chips are packaged in plastic or ceramic cases.</li>
     <li>The case protects the chip and provides electrical connections to the outside world.</li>
 </ul>
-<p>Integrated circuits are classified by the number of transistors they contain. There are several categories of integrated circuits:</p>
+<!-- <p>Integrated circuits are classified by the number of transistors they contain. There are several categories of integrated circuits:</p> -->
             </div>
-            <div id="openseadragon-container" style="width: 800px; height: 600px;"></div>
+            <!-- <div id="openseadragon-container" style="width: 800px; height: 600px;"></div>
 
             <div id="controls">
                 <button id="zoom-in">Zoom In</button>
@@ -191,12 +81,13 @@
                     homeButton: "home",
                     fullPageButton: "full-page",
                 });
-            </script>
+            </script> -->
             <div class="button-container">
-                <video id="tubeVideo" controls style="width: 100%; height: auto;">
+                <video id="tubeVideo" controls style="border-radius: 10px; width: 100%; height: auto;">
                     <source src="/videos/1960S.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <p>Event from the IC Era</p>                
             </div>
         </div>
         <div class="footer">
