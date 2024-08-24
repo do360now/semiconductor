@@ -4,10 +4,8 @@
 #
 #    pip-compile requirements.in
 #
-annotated-types==0.7.0
-    # via pydantic
-anyio==4.4.0
-    # via starlette
+
+
 click==8.1.7
     # via uvicorn
 dnspython==2.6.1
