@@ -28,7 +28,6 @@ If you find this course valuable and would like to support this effort, consider
 
 **Bitcoin Address:** `1BDhXcY9brMprLT7KCWnmjSPPCfifNz5kC`
 
-**Paypal:** [paypal.me/do360now](https://paypal.me/do360now)
 
 ## Course Structure
 
