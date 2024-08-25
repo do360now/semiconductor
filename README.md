@@ -8,15 +8,27 @@ The mission, if you accept it, is to equip students, professionals, and enthusia
 
 ## Contribute
 
-Check out our code and submit your PR.
+Want to contribute to the development of this course?
 
-[https://github.com/do360now/semiconductor](https://github.com/do360now/semiconductor)
+We welcome contributions from subject matter experts, educators, and enthusiasts who are passionate about sharing their knowledge with others.
+
+Here are a few ways you can contribute:
+
+- Write new content or improve existing content.
+- Create interactive quizzes or learning activities.
+- Provide feedback on the course structure and content.
+
+If you're interested in contributing, please visit our repository and share your suggestions.
+
+[GitHub Repository: do360now/semiconductor](https://github.com/do360now/semiconductor)
 
 ## Support
 
 If you find this course valuable and would like to support this effort, consider making a donation:
 
-**Bitcoin Address:** 1BDhXcY9brMprLT7KCWnmjSPPCfifNz5kC
+**Bitcoin Address:** `1BDhXcY9brMprLT7KCWnmjSPPCfifNz5kC`
+
+**Paypal:** [paypal.me/do360now](https://paypal.me/do360now)
 
 ## Course Structure
 
@@ -36,4 +48,4 @@ Ready to dive into the world of semiconductor processing? Begin your learning jo
 
 ---
 
-<button onclick="window.history.back();">Back to Main Menu</button>
+[Back to Main Menu](#)
