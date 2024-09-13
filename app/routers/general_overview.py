@@ -4,7 +4,7 @@ from fastapi.templating import Jinja2Templates
 from jinja2 import TemplateNotFound
 
 router = APIRouter(prefix="/general_overview")
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="templates/general_overview/")
 
 @router.get("/", response_class=HTMLResponse)
 async def general_overview(request: Request):
@@ -16,7 +16,7 @@ async def introduction(request: Request):
 
 @router.get("/introduction/{page_name}", response_class=HTMLResponse)
 async def read_page(request: Request, page_name: str):
-    template_name = f"{page_name}.html"
+    template_name = f"introduction/{page_name}.html"
     try:
         return templates.TemplateResponse(template_name, {"request": request})
     except TemplateNotFound:
