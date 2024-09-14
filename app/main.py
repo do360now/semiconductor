@@ -1,13 +1,14 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 import uvicorn
-from routers import main, general_overview
+from routers import main, general_overview, technical_overview
 
 app = FastAPI()
 
 # Include routers
 app.include_router(main.router)
 app.include_router(general_overview.router)
+app.include_router(technical_overview.router)
 
 
 # Mount static files
