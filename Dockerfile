@@ -12,12 +12,16 @@ RUN pip install --upgrade pip && \
 # Copy the application code
 COPY ./app /app
 
+# Create a writable directory for visitor count and set the correct permissions
+RUN mkdir -p /app/visitor_data && chmod 777 /app/visitor_data
+
 # Expose port 80 (since you are running on port 80)
 EXPOSE 80
 
 # Switch to a non-root user (optional but recommended for security)
 RUN adduser --disabled-password fastapiuser
 USER fastapiuser
+
 
 # Command to run the application
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]

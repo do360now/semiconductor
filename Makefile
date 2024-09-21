@@ -19,12 +19,12 @@ docker-install:
 
 
 build:
-	docker build -t do360now/semiconductor:1.0.0 .
+	docker build -t do360now/semiconductor:1.2.0 .
 
 run:
-	docker run --rm --name semiconductor-overview -p 8080:80 do360now/semiconductor:1.0.0
+	docker run --rm --name semiconductor-overview -p 8000:80 do360now/semiconductor:1.2.0
 
 push:
-	docker push do360now/semiconductor:1.0.0
+	docker push do360now/semiconductor:1.2.0
 
 

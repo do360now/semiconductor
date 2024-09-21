@@ -1,6 +1,6 @@
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     margin: 0;
@@ -31,29 +31,57 @@ body {
 .container .blue-buttons {
     text-align: center;
     margin: 20px 0;
+    
 }
 .container .blue-buttons button {
-    background-color: #0078D4;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+    text-decoration: none;
+    padding: 15px 30px;
     font-size: 16px;
-    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    
+    
+    
 }
 .container .blue-buttons button:hover {
-    background-color: #005BB5;
+    background: linear-gradient(90deg, #0078d4, #005a9e); /* Gradient for the "Next" button */
 }
 
+
+.button {
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    background-color: #005a9e; /* Dark blue color for the "Back" button */
+    
+}
+
+.button:hover {
+    background: linear-gradient(180deg, #005a9e, #2493e9 ); /* Gradient for the "Next" button */
+}
+
+
+
+
 .sidebar {
-    background-color: #0078D4;
+    background-color: #005a9e;
     color: white;
     padding: 20px;
     font-size: 20px;
     flex-basis: 150px;
     text-align: center;
     border-radius: 10px;
+    background: linear-gradient(180deg, #005a9e, #2493e9 ); /* Gradient for the "Next" button */
 }
 .main-content {
     padding: 20px;
@@ -83,19 +111,6 @@ body {
     
 }
 
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
 
 
 
