@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/do360now/semiconductor/compare/v1.1.0...v1.2.0) (2024-09-23)
+
+
+### Features
+
+* add docker login and push ([25e942e](https://github.com/do360now/semiconductor/commit/25e942e195c0230f5dad74ac53e3b6ad0c8580a8))
+
 # [1.1.0](https://github.com/do360now/semiconductor/compare/v1.0.0...v1.1.0) (2024-09-23)
 
 
