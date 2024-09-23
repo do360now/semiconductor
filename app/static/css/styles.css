@@ -1,17 +1,17 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #dadada;
     color: #333;
     margin: 0;
     padding: 20px;
     text-align: left;
-    
+
 }
 .container {
     max-width: 900px;
     margin: auto;
-    background: #ffffff;
+    background: #aaaaaa;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
     border-radius: 10px;
     border: 2px solid #e0e0e0;
@@ -25,13 +25,13 @@ body {
     border-radius: 10px;
     margin-top: 20px;
     align-items: center;
-    
+
 }
 
 .container .blue-buttons {
     text-align: center;
     margin: 20px 0;
-    
+
 }
 .container .blue-buttons button {
     color: white;
@@ -43,9 +43,9 @@ body {
     margin: 0 10px;
     display: inline-block;
     transition: background-color 0.3s ease;
-    
-    
-    
+
+
+
 }
 .container .blue-buttons button:hover {
     background: linear-gradient(90deg, #0078d4, #005a9e); /* Gradient for the "Next" button */
@@ -63,7 +63,7 @@ body {
     display: inline-block;
     transition: background-color 0.3s ease;
     background-color: #005a9e; /* Dark blue color for the "Back" button */
-    
+
 }
 
 .button:hover {
@@ -86,9 +86,9 @@ body {
 .main-content {
     padding: 20px;
     flex-grow: 1;
-    text-align: left;   
+    text-align: left;
     border: 2px solid #ccc;
-    border-radius: 10px;  
+    border-radius: 10px;
     margin-top: 20px;
 }
 .content-text h1 {
@@ -108,7 +108,7 @@ body {
     border-radius: 10px;
     margin-top: 20px;
     align-items: center;
-    
+
 }
 
 
@@ -195,7 +195,7 @@ body {
     flex-direction: column;
     align-items: left;
     gap: 10px;
-    
+
 }
 
 .menu-buttons2 a {
@@ -322,7 +322,7 @@ body {
     width: 300px; /* Could be more or less, depending on screen size */
     text-align: center;
     flex-grow: 1;
-    border-radius: 10px;  
+    border-radius: 10px;
 }
 
 /* Close button */

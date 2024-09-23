@@ -1,3 +1,4 @@
+![alt text](https://github.com/do360now/semiconductor/blob/main/app/static/images/home.png)
 # About Semiconductor Processing Overview
 
 **Semiconductor Processing Overview (SPO)** is a comprehensive online course designed to provide learners with an in-depth understanding of the semiconductor manufacturing process. This course covers everything from the basic principles of semiconductor materials to the advanced techniques used in modern device fabrication.
@@ -44,6 +45,20 @@ This course is ideal for engineers, students, and professionals in the electroni
 ## Get Started
 
 Ready to dive into the world of semiconductor processing? Begin your learning journey by exploring our [General Overview](/general_overview) module or [Technical Overview](/technical_overview) module.
+
+## Commit Message Format
+For semantic-release to work correctly, commit messages need to follow the Conventional Commits format. Here are a few examples of valid commit messages:
+
+- fix: Fixes a bug (will result in a patch version bump)
+- Example: fix: correct minor typos in code
+- feat: Adds a new feature (will result in a minor version bump)
+- Example: feat: add user authentication
+- BREAKING CHANGE: Introduces a breaking change (will result in a major version bump)
+Example:
+
+`feat: refactor authentication logic`
+
+`BREAKING CHANGE: The login API now requires an email instead of username`
 
 ---
 

@@ -106,4 +106,3 @@ The future of semiconductor fabrication may involve new materials like **Gallium
 ### Conclusion
 
 The journey from vacuum tubes to today’s ICs represents an incredible evolution in technology. Modern semiconductor fabrication has enabled the miniaturization, efficiency, and affordability of electronic devices, driving the digital revolution. As we continue to push the boundaries of what's possible, the future promises even more astonishing advancements.
-

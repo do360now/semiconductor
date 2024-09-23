@@ -1,117 +1,144 @@
 .
-├── Dockerfile
-├── Makefile
-├── README.md
-├── __pycache__
-│   └── main.cpython-311.pyc
 ├── app
+│   ├── __init__.py
+│   ├── init.py
+│   ├── main.py
 │   ├── __pycache__
 │   │   ├── app.cpython-310.pyc
 │   │   ├── app.cpython-311.pyc
-│   │   └── app.cpython-36.pyc
-│   ├── app.py
-│   ├── images
-│   │   ├── CHIP.png
-│   │   ├── CPU.png
-│   │   ├── EVSE.png
-│   │   ├── GENIE.png
-│   │   ├── GENIE_2.png
-│   │   ├── GENIE_2_1.png
-│   │   ├── IC.png
-│   │   ├── RETICLE.png
-│   │   ├── SPOA.png
-│   │   ├── ULSI.png
-│   │   ├── VLSI.png
-│   │   ├── ageoftransistors.png
-│   │   ├── analogvsdigital.png
-│   │   ├── cellphone.png
-│   │   ├── electric.png
-│   │   ├── favicon - Copy.png
-│   │   ├── favicon.png
-│   │   ├── favicon2.png
-│   │   ├── first_transistor.png
-│   │   ├── front_image.png
-│   │   ├── front_image_small.png
-│   │   ├── goldenwafer.png
-│   │   ├── goldenwafers.png
-│   │   ├── gpt_ulsi.png
-│   │   ├── index.png
-│   │   ├── internal_view.png
-│   │   ├── internal_view.png:Zone.Identifier
-│   │   ├── keyboard.png
-│   │   ├── light-bulb.png
-│   │   ├── lightbulb.png
-│   │   ├── moore.png
-│   │   ├── msi.png
-│   │   ├── semiconductor_wafer.jpg
-│   │   ├── small_scale_device.png
-│   │   ├── ssi.png
-│   │   ├── ssi_garage.png
-│   │   ├── swave.png
-│   │   ├── swave.png:Zone.Identifier
-│   │   ├── transistor.png
-│   │   ├── tube2ic.png
-│   │   ├── tubes.png
-│   │   ├── tubes.png:Zone.Identifier
-│   │   ├── vacuumtubes.png
-│   │   ├── vc.png
-│   │   ├── vc1.png
-│   │   ├── vc3.png
-│   │   ├── wafers.png
-│   │   └── wave.png
-│   ├── my_app.txt
-│   ├── requirements.txt
+│   │   ├── app.cpython-36.pyc
+│   │   ├── __init__.cpython-310.pyc
+│   │   ├── main.cpython-310.pyc
+│   │   └── __version__.cpython-310.pyc
 │   ├── routers
+│   │   ├── general_overview.py
 │   │   ├── __init__.py
+│   │   ├── main.py
 │   │   ├── __pycache__
+│   │   │   ├── general_overview.cpython-310.pyc
 │   │   │   ├── __init__.cpython-310.pyc
 │   │   │   ├── __init__.cpython-311.pyc
 │   │   │   ├── __init__.cpython-36.pyc
+│   │   │   ├── main.cpython-310.pyc
 │   │   │   ├── pages.cpython-310.pyc
 │   │   │   ├── pages.cpython-311.pyc
-│   │   │   └── pages.cpython-36.pyc
-│   │   ├── pages.py
-│   │   └── tutorial.py
+│   │   │   ├── pages.cpython-36.pyc
+│   │   │   └── technical_overview.cpython-310.pyc
+│   │   └── technical_overview.py
 │   ├── static
-│   │   ├── styles.css
-│   │   └── styles2.css
-│   ├── tech_overview.md
+│   │   ├── css
+│   │   │   └── styles.css
+│   │   ├── images
+│   │   │   ├── ageoftransistors.png
+│   │   │   ├── analogvsdigital.png
+│   │   │   ├── cellphone.png
+│   │   │   ├── CHIP.png
+│   │   │   ├── CPU.png
+│   │   │   ├── electric.png
+│   │   │   ├── EVSE.png
+│   │   │   ├── favicon2.png
+│   │   │   ├── favicon - Copy.png
+│   │   │   ├── favicon.png
+│   │   │   ├── first_transistor.png
+│   │   │   ├── front_image.png
+│   │   │   ├── front_image_small.png
+│   │   │   ├── GENIE_2_1.png
+│   │   │   ├── GENIE_2.png
+│   │   │   ├── GENIE.png
+│   │   │   ├── goldenwafer.png
+│   │   │   ├── goldenwafers.png
+│   │   │   ├── gpt_ulsi.png
+│   │   │   ├── IC.png
+│   │   │   ├── index.png
+│   │   │   ├── internal_view.png
+│   │   │   ├── internal_view.png:Zone.Identifier
+│   │   │   ├── keyboard.png
+│   │   │   ├── light-bulb.png
+│   │   │   ├── lightbulb.png
+│   │   │   ├── moore.png
+│   │   │   ├── msi.png
+│   │   │   ├── RETICLE.png
+│   │   │   ├── semiconductor_wafer.jpg
+│   │   │   ├── small_scale_device.png
+│   │   │   ├── SPOA.png
+│   │   │   ├── ssi_garage.png
+│   │   │   ├── ssi.png
+│   │   │   ├── swave.png
+│   │   │   ├── swave.png:Zone.Identifier
+│   │   │   ├── transistor.png
+│   │   │   ├── tube2ic.png
+│   │   │   ├── tubes.png
+│   │   │   ├── tubes.png:Zone.Identifier
+│   │   │   ├── ULSI.png
+│   │   │   ├── vacuumtubes.png
+│   │   │   ├── vc1.png
+│   │   │   ├── vc3.png
+│   │   │   ├── vc.png
+│   │   │   ├── VLSI.png
+│   │   │   ├── wafers.png
+│   │   │   └── wave.png
+│   │   └── videos
+│   │       ├── 1930S.mp4
+│   │       ├── 1950S.mp4
+│   │       └── 1960S.mp4
 │   ├── templates
 │   │   ├── about_spo.html
-│   │   ├── amplitude.html
-│   │   ├── analog_and_digital.html
-│   │   ├── binary_counting.html
-│   │   ├── chapter_review_introduction.html
 │   │   ├── course_overview.html
-│   │   ├── digital_logic.html
-│   │   ├── electricity_electronics.html
-│   │   ├── frequency.html
-│   │   ├── general_overview.html
+│   │   ├── general_overview
+│   │   │   ├── ch2_semi_measurements
+│   │   │   │   └── semi_proc_meas.html
+│   │   │   ├── chapter_review_introduction.html
+│   │   │   ├── general_overview.html
+│   │   │   ├── introduction
+│   │   │   │   ├── amplitude.html
+│   │   │   │   ├── analog_and_digital.html
+│   │   │   │   ├── binary_counting.html
+│   │   │   │   ├── digital_logic.html
+│   │   │   │   ├── electricity_electronics.html
+│   │   │   │   ├── frequency.html
+│   │   │   │   ├── history_electronics.html
+│   │   │   │   ├── integrated_circuit_development.html
+│   │   │   │   ├── integrated_circuits.html
+│   │   │   │   ├── large_scale_devices.html
+│   │   │   │   ├── medium_scale_devices.html
+│   │   │   │   ├── objectives.html
+│   │   │   │   ├── small_scale_devices.html
+│   │   │   │   ├── solid_state.html
+│   │   │   │   ├── ultra_large_scale_devices.html
+│   │   │   │   ├── vacuum_tubes.html
+│   │   │   │   └── very_large_scale_devices.html
+│   │   │   └── introduction.html
 │   │   ├── glossary.html
-│   │   ├── history_electronics.html
 │   │   ├── index.html
-│   │   ├── integrated_circuit_development.html
 │   │   ├── integrated_circuit_development2.html
-│   │   ├── integrated_circuits.html
-│   │   ├── introduction.html
 │   │   ├── introduction_modal.html
-│   │   ├── large_scale_devices.html
-│   │   ├── medium_scale_devices.html
-│   │   ├── objectives.html
-│   │   ├── small_scale_devices.html
-│   │   ├── solid_state.html
-│   │   ├── technical_overview.html
-│   │   ├── tutorial.html
-│   │   ├── ultra_large_scale_devices.html
-│   │   ├── vacuum_tubes.html
-│   │   └── very_large_scale_devices.html
-│   └── videos
-│       ├── 1930S.mp4
-│       ├── 1950S.mp4
-│       └── 1960S.mp4
+│   │   ├── main_menu.html
+│   │   ├── technical_overview
+│   │   │   └── technical_overview.html
+│   │   └── tutorial.html
+│   ├── __version__.py
+│   └── visitor_data
+│       └── visitor_count.txt
+├── CHANGELOG.md
 ├── docker-compose.yaml
+├── Dockerfile
+├── llm_help.txt
+├── Makefile
+├── models.txt
 ├── my_app.txt
+├── poetry.lock
+├── __pycache__
+│   ├── main.cpython-311.pyc
+│   └── __version__.cpython-310.pyc
+├── pyproject.toml
+├── README.md
 ├── requirements.in
-└── requirements.txt
+├── requirements.txt
+├── semi_project.txt
+├── tech_overview.md
+└── tests
+    ├── __pycache__
+    │   └── test_main.cpython-310-pytest-8.3.3.pyc
+    └── test_main.py
 
-9 directories, 105 files
+17 directories, 124 files
