@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/do360now/semiconductor/compare/v1.3.3...v1.4.0) (2024-09-23)
+
+
+### Features
+
+* add automatic symantic version ([b61fdd5](https://github.com/do360now/semiconductor/commit/b61fdd588f3b7ac1e08591ee277ae5b2bdcb21bb))
+
 ## [1.3.3](https://github.com/do360now/semiconductor/compare/v1.3.2...v1.3.3) (2024-09-23)
 
 
