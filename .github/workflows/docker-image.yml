@@ -38,7 +38,7 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add .env app/__version__.py
+          git add app/__version__.py
           git commit -m "Update version to ${{ env.RELEASE_VERSION }} in app/__version__.py"
           git push
 
