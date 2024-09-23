@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/do360now/semiconductor/compare/v1.3.2...v1.3.3) (2024-09-23)
+
+
+### Bug Fixes
+
+* fix running from Docker container ([15a8c90](https://github.com/do360now/semiconductor/commit/15a8c908886ee7183cb730c24cc61693d91c6131))
+
 ## [1.3.2](https://github.com/do360now/semiconductor/compare/v1.3.1...v1.3.2) (2024-09-23)
 
 
