@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/do360now/semiconductor/compare/v1.3.1...v1.3.2) (2024-09-23)
+
+
+### Bug Fixes
+
+* remove .env from workflow ([043590a](https://github.com/do360now/semiconductor/commit/043590a2d5bda517ee0e3f64948b5009997b8fdd))
+
 ## [1.3.1](https://github.com/do360now/semiconductor/compare/v1.3.0...v1.3.1) (2024-09-23)
 
 
