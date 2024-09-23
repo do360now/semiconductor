@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/do360now/semiconductor/compare/v1.0.0...v1.1.0) (2024-09-23)
+
+
+### Bug Fixes
+
+* update workflow file ([12d847d](https://github.com/do360now/semiconductor/commit/12d847da128a44f3f04475c62ea9441d458392ed))
+
+
+### Features
+
+* add new workflow ([bac6b64](https://github.com/do360now/semiconductor/commit/bac6b6481bfc301dcd3830341d0b559676d02d5d))
+
 # 1.0.0 (2024-09-23)
 
 
