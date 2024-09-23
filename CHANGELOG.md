@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/do360now/semiconductor/compare/v1.3.0...v1.3.1) (2024-09-23)
+
+
+### Bug Fixes
+
+* remove .env file update ([dabcc95](https://github.com/do360now/semiconductor/commit/dabcc9576c622c8b5771273decac4cb2ef69594a))
+
 # [1.3.0](https://github.com/do360now/semiconductor/compare/v1.2.0...v1.3.0) (2024-09-23)
 
 
