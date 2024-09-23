@@ -6,3 +6,4 @@ markdown
 pytest
 pre-commit
 poetry
+black

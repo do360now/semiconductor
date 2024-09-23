@@ -20,7 +20,6 @@ poetry:
 test:
 	PYTHONPATH=. poetry run pytest tests
 
-
 black:
 	poetry run black . --check
 
