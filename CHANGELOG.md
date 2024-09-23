@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/do360now/semiconductor/compare/v1.4.0...v1.5.0) (2024-09-23)
+
+
+### Features
+
+* add black ([28a7ea8](https://github.com/do360now/semiconductor/commit/28a7ea81cb94bc45855fb8e40edec7b5ff9a0dd7))
+
 # [1.4.0](https://github.com/do360now/semiconductor/compare/v1.3.3...v1.4.0) (2024-09-23)
 
 
