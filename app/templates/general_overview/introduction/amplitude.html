@@ -13,10 +13,10 @@
             <h2>Amplitude</h2>
         </div>
 <div class="content-text">
-    
+
     <p>In physics, <strong>amplitude</strong> refers to the maximum extent of a vibration or oscillation, measured from the position of equilibrium. In the context of waves, amplitude is the distance from the center line (or the still position) to the top of a crest or to the bottom of a trough.</p>
     <p>The amplitude of a wave determines its energy. Higher amplitude means more energy, and in the case of sound waves, a higher amplitude corresponds to a louder sound.</p>
-    
+
     <div class="visualization-container">
         <label for="amplitude-slider">Adjust the amplitude:</label>
         <input type="range" id="amplitude-slider" min="1" max="100" value="50" oninput="updateAmplitude(this.value)">
@@ -25,29 +25,29 @@
             <path id="wave-path" d="M0 10 Q 5 0, 10 10 T 20 10 T 30 10 T 40 10 T 50 10 T 60 10 T 70 10 T 80 10 T 90 10 T 100 10" fill="none" stroke="#0078D4" stroke-width="2"/>
         </svg>
     </div>
-    
-    
+
+
     <script>
         function updateAmplitude(value) {
             document.getElementById('amplitude-value').innerText = value;
             const amplitude = value / 10;
-            const wavePath = `M0 10 
-                              Q 5 ${10 - amplitude}, 10 10 
-                              T 20 10 
-                              T 30 10 
-                              T 40 10 
-                              T 50 10 
-                              T 60 10 
-                              T 70 10 
-                              T 80 10 
-                              T 90 10 
+            const wavePath = `M0 10
+                              Q 5 ${10 - amplitude}, 10 10
+                              T 20 10
+                              T 30 10
+                              T 40 10
+                              T 50 10
+                              T 60 10
+                              T 70 10
+                              T 80 10
+                              T 90 10
                               T 100 10`;
             document.getElementById('wave-path').setAttribute('d', wavePath);
         }
-        
+
     </script>
-    
-    
+
+
 
     <p>As you adjust the amplitude, notice how the height of the wave increases or decreases. This visualizes how amplitude affects the overall energy and intensity of the wave.</p>
 </div>

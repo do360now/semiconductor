@@ -1,5 +1,45 @@
+# Any args passed to the make script, use with $(call args, default_value)
+args = `arg="$(filter-out $@,$(MAKECMDGOALS))" && echo $${arg:-${1}}`
+
+########################################################################################################################
+# Quality checks
+########################################################################################################################
+
+test:
+	PYTHONPATH=. poetry run pytest tests
+
+
+black:
+	poetry run black . --check
+
+ruff:
+	poetry run ruff check app tests
+
+format:
+	poetry run black .
+	poetry run ruff check tests --fix
+
+mypy:
+	poetry run mypy app
+
+check:
+	make format
+	make mypy
+
+
 .PHONY: build run push compile
 
+########################################################################################################################
+# Local development
+########################################################################################################################
+
+dependencies:
+	poetry add $(cat requirements.in)
+
+run-local:
+	poetry run uvicorn app.main:app --reload
+
+# pre-poetry-install:
 compile:
 	pip-compile requirements.in --upgrade
 
@@ -19,12 +59,19 @@ docker-install:
 
 
 build:
-	docker build -t do360now/semiconductor:1.2.0 .
+	docker build -t do360now/semiconductor:1.3.0 .
 
 run:
-	docker run --rm --name semiconductor-overview -p 8000:80 do360now/semiconductor:1.2.0
+	docker run --rm --name semiconductor-overview -p 8000:80 do360now/semiconductor:1.3.0
 
 push:
-	docker push do360now/semiconductor:1.2.0
+	docker push do360now/semiconductor:1.3.0
 
+llm:
+	llm -m orca-mini-3b-gguf2-q4_0 'What is the capital of France?'
 
+chat:
+	llm -m llm-gpt4all -c 'What is the capital of France?'
+
+query-llm:
+	llm models

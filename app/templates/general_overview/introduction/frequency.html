@@ -40,17 +40,17 @@
         document.getElementById('frequency-value').innerText = frequency;
         const amplitude = 5;
         let wavePath = 'M0 10 ';
-        
+
         // Maintain a high resolution for smoothness
         for (let i = 0; i <= 100; i += 0.5) {
             const y = 10 + amplitude * Math.sin((i / 100) * frequency * 2 * Math.PI);
             wavePath += `L ${i} ${y} `;
         }
-        
+
         document.getElementById('wave-path').setAttribute('d', wavePath);
     }
-    
-    
+
+
 </script>
 
 </body>

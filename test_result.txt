@@ -1,0 +1,10 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/flynn/DevOps/python/projects/semiconductor
+configfile: pyproject.toml
+plugins: anyio-4.6.0
+collected 1 item
+
+tests/test_main.py .                                                     [100%]
+
+============================== 1 passed in 0.56s ===============================

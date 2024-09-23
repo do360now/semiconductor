@@ -122,23 +122,14 @@
 ├── CHANGELOG.md
 ├── docker-compose.yaml
 ├── Dockerfile
-├── llm_help.txt
 ├── Makefile
-├── models.txt
-├── my_app.txt
-├── poetry.lock
 ├── __pycache__
 │   ├── main.cpython-311.pyc
 │   └── __version__.cpython-310.pyc
-├── pyproject.toml
 ├── README.md
 ├── requirements.in
 ├── requirements.txt
 ├── semi_project.txt
-├── tech_overview.md
-└── tests
-    ├── __pycache__
-    │   └── test_main.cpython-310-pytest-8.3.3.pyc
-    └── test_main.py
+└── tech_overview.md
 
-17 directories, 124 files
+15 directories, 117 files

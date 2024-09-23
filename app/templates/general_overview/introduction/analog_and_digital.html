@@ -6,22 +6,22 @@
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="icon" href="/images/favicon2.png">
     <title>Analog and Digital Signals</title>
-   
+
 </head>
 <body>
-   
+
 <div class="container">
     <div class="sidebar">
         INTRODUCTION
     </div>
     <div class="main-content">
     <div class="content">
-       
+
         <h1>Analog and Digital Signals</h1>
-    
+
         <h2>Analog:</h2>
         <p>An analog signal is a continuous signal that varies in amplitude or frequency. These signals are commonly used in devices such as radios, televisions, and telephones.</p>
-    
+
         <div class="footer">
             <a href="/general_overview/introduction/amplitude"><button>Amplitude</button></a>
             <p></p>
@@ -31,7 +31,7 @@
 
         <h2>Digital:</h2>
         <p>A digital signal has only two states: on or off. This type of signal is employed in devices like computers, calculators, and digital clocks.</p>
-    
+
         <p>Most electronic devices incorporate a combination of analog and digital components. For instance, a common analog component is a dimmer switch for lighting, which allows for adjusting the light intensity to anywhere between fully off and fully on. Conversely, a digital light switch offers only fixed levels of lighting, such as completely off or fully on.</p>
 
         <div class="footer">
@@ -39,19 +39,19 @@
             <p></p>
             <a href="/general_overview/introduction/digital_logic"><button>Digital Logic</button></a>
         </div>
-    
+
         <h2>Operating in Digital and Analog Modes</h2>
         <div class="image-container">
             <img src="/images/light-bulb.png" alt="Lightbulb" id="lightbulb" class="lightbulb">
             <span id="brightness-level">Brightness: 50%</span>
         </div>
-        
+
         <h3>Digital Mode:</h3>
         <p>When a device operates in digital mode, it can only switch between distinct preset levels. For example, a digital device might only allow adjustments across five defined levels from off to fully on. Users are restricted to these levels and cannot choose settings in between.</p>
 
         <h3>Analog Mode:</h3>
         <p>In contrast, when operating in analog mode, users can select any level within the available range, offering greater flexibility and control without being confined to preset options.</p>
-    
+
     </body>
         <div class="buttons">
             <button onclick="setMode('digital')">Digital Mode</button>
@@ -69,7 +69,7 @@
             <button onmousedown="startDimming('up')" onmouseup="stopDimming()">Brighten</button>
         </div>
     </div>
-   
+
     <div id="digital-controls" style="display: none;">
         <button onclick="setBrightness(0)">0%</button>
         <button onclick="setBrightness(25)">25%</button>
@@ -123,7 +123,7 @@
         updateBrightness();
     </script>
 
-    
+
     <div class="footer">
         <a href="/general_overview/introduction"><button>← Back</button></a>
         <a href="/glossary"><button>Glossary</button></a>
