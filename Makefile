@@ -1,6 +1,16 @@
 # Any args passed to the make script, use with $(call args, default_value)
 args = `arg="$(filter-out $@,$(MAKECMDGOALS))" && echo $${arg:-${1}}`
 
+
+# Load .env file
+include .env
+export $(shell sed 's/=.*//' .env)
+
+# Example target that uses an environment variable
+example:
+	echo "The value of MY_VAR is: ${VERSION}"
+
+
 ########################################################################################################################
 # Quality checks
 ########################################################################################################################
@@ -59,13 +69,13 @@ docker-install:
 
 
 build:
-	docker build -t do360now/semiconductor:1.3.0 .
+	docker build -t do360now/semiconductor:${VERSION} .
 
 run:
-	docker run --rm --name semiconductor-overview -p 8000:80 do360now/semiconductor:1.3.0
+	docker run --rm --name semiconductor-overview -p 8000:80 do360now/semiconductor:${VERSION}
 
 push:
-	docker push do360now/semiconductor:1.3.0
+	docker push do360now/semiconductor:${VERSION}
 
 llm:
 	llm -m orca-mini-3b-gguf2-q4_0 'What is the capital of France?'
