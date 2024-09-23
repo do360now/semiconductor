@@ -1,7 +1,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #dadada;
     color: #333;
     margin: 0;
     padding: 20px;
@@ -11,7 +11,7 @@ body {
 .container {
     max-width: 900px;
     margin: auto;
-    background: #ffffff;
+    background: #aaaaaa;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
     border-radius: 10px;
     border: 2px solid #e0e0e0;
