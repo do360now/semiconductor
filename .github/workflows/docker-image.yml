@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run semantic-release and capture the version
+        id: semantic_release  # Add an ID so you can refer to this step
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npx semantic-release > release_output.txt
+          RELEASE_VERSION=$(grep -oP '(?<=The next release version is )\d+\.\d+\.\d+' release_output.txt)
+          echo "RELEASE_VERSION=$RELEASE_VERSION" >> $GITHUB_ENV
+
+      - name: Build and push Docker image
+        run: |
+          docker build . -t do360now/semiconductor:${{ env.RELEASE_VERSION }}
+          docker push do360now/semiconductor:${{ env.RELEASE_VERSION }}
