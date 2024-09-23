@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/do360now/semiconductor/compare/v1.2.0...v1.3.0) (2024-09-23)
+
+
+### Features
+
+* add automatic app versioning ([4fd2fdf](https://github.com/do360now/semiconductor/commit/4fd2fdfe21185dd2e923ac898c59811631c346b5))
+
 # [1.2.0](https://github.com/do360now/semiconductor/compare/v1.1.0...v1.2.0) (2024-09-23)
 
 
