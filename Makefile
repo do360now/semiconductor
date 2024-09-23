@@ -14,6 +14,8 @@ example:
 ########################################################################################################################
 # Quality checks
 ########################################################################################################################
+poetry:
+	pip install poetry
 
 test:
 	PYTHONPATH=. poetry run pytest tests
@@ -43,8 +45,11 @@ check:
 # Local development
 ########################################################################################################################
 
-dependencies:
-	poetry add $(cat requirements.in)
+add-dependencies:
+	poetry add $(shell cat requirements.in)
+
+install-dependencies:
+	poetry install
 
 run-local:
 	poetry run uvicorn app.main:app --reload
