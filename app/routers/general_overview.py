@@ -4,7 +4,7 @@ from fastapi.templating import Jinja2Templates
 from jinja2 import TemplateNotFound
 
 router = APIRouter(prefix="/general_overview")
-templates = Jinja2Templates(directory="app/templates/general_overview/")
+templates = Jinja2Templates(directory="templates/general_overview/")
 
 
 @router.get("/", response_class=HTMLResponse)

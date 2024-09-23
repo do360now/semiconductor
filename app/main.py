@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 import uvicorn
-from .routers import home, general_overview, technical_overview
+from routers import home, general_overview, technical_overview
 
 
 app = FastAPI()
@@ -13,9 +13,9 @@ app.include_router(technical_overview.router)
 
 
 # Mount static files
-app.mount("/static", StaticFiles(directory="app/static"), name="static")
-app.mount("/images", StaticFiles(directory="app/static/images"), name="images")
-app.mount("/videos", StaticFiles(directory="app/static/videos"), name="videos")
+app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/images", StaticFiles(directory="static/images"), name="images")
+app.mount("/videos", StaticFiles(directory="static/videos"), name="videos")
 
 
 def main():
