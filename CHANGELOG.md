@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/do360now/semiconductor/compare/v1.5.0...v1.6.0) (2024-09-24)
+
+
+### Features
+
+* speed up site ([1cee3c7](https://github.com/do360now/semiconductor/commit/1cee3c7e9a6b9f07ff4448563f093594f4438b6f))
+
 # [1.5.0](https://github.com/do360now/semiconductor/compare/v1.4.0...v1.5.0) (2024-09-23)
 
 
