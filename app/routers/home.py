@@ -1,21 +1,16 @@
 from fastapi import APIRouter, Request
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
-from app.__version__ import (
-    __version__,
-)  # Adjust the import to point to the correct module
-from app.routers import home, general_overview, technical_overview
-
-import os
+from __version__ import __version__  # Adjust the import to point to the correct module
 
 router = APIRouter()
-templates = Jinja2Templates(directory="app/templates")
+templates = Jinja2Templates(directory="templates")
 
 
 # Main index route
 @router.get("/", response_class=HTMLResponse)
 async def index(request: Request):
-    return templates.TemplateResponse(request, "index.html", {"version": __version__})
+    return templates.TemplateResponse("index.html", {"request": request, "version": __version__})
 
 
 # Other routes
