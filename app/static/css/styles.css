@@ -258,7 +258,7 @@ body {
 
 .container .main-content .grey-buttons .button {
     box-sizing: border-box; /* Include padding and border in the element's width and height */
-    background-color: #dcdcdc; /* Light grey buttons */
+    background-color: linear-gradient(180deg, #005a9e, #2493e9 ); /* Gradient for the "Next" button */
     color: black;
     border: 2px solid #a9a9a9; /* Dark grey border */
     padding: 10px 20px;

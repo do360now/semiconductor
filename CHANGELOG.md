@@ -1,3 +1,31 @@
+# [1.6.0](https://github.com/do360now/semiconductor/compare/v1.5.0...v1.6.0) (2024-09-24)
+
+
+### Features
+
+* speed up site ([1cee3c7](https://github.com/do360now/semiconductor/commit/1cee3c7e9a6b9f07ff4448563f093594f4438b6f))
+
+# [1.5.0](https://github.com/do360now/semiconductor/compare/v1.4.0...v1.5.0) (2024-09-23)
+
+
+### Features
+
+* add black ([28a7ea8](https://github.com/do360now/semiconductor/commit/28a7ea81cb94bc45855fb8e40edec7b5ff9a0dd7))
+
+# [1.4.0](https://github.com/do360now/semiconductor/compare/v1.3.3...v1.4.0) (2024-09-23)
+
+
+### Features
+
+* add automatic symantic version ([b61fdd5](https://github.com/do360now/semiconductor/commit/b61fdd588f3b7ac1e08591ee277ae5b2bdcb21bb))
+
+## [1.3.3](https://github.com/do360now/semiconductor/compare/v1.3.2...v1.3.3) (2024-09-23)
+
+
+### Bug Fixes
+
+* fix running from Docker container ([15a8c90](https://github.com/do360now/semiconductor/commit/15a8c908886ee7183cb730c24cc61693d91c6131))
+
 ## [1.3.2](https://github.com/do360now/semiconductor/compare/v1.3.1...v1.3.2) (2024-09-23)
 
 
