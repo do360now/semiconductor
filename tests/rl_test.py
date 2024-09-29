@@ -38,7 +38,7 @@ try:
     print("Successfully navigated to the General Overview page")
 
     # Navigate to the About SPO page
-    driver.get("https://semiconductoreducation.com//about_spo")
+    driver.get("https://semiconductoreducation.com/about_spo")
 
     # Verify that the About SPO page loaded
     about_title = WebDriverWait(driver, 10).until(
