@@ -25,10 +25,28 @@ query-llm:
 	llm models
 
 ########################################################################################################################
-# Quality checks
+# Local development
 ########################################################################################################################
 poetry:
 	pip install poetry
+
+add-dependencies:
+	poetry add $(shell cat requirements.in)
+
+powersell-add-dependencies:
+	poetry add (Get-Content requirements.in | Out-String)
+
+
+install-dependencies:
+	poetry install
+
+run-local:
+	poetry run uvicorn app.main:app --reload --host 127.0.0.1 --port 8080
+
+########################################################################################################################
+# Quality checks
+########################################################################################################################
+
 
 test:
 	PYTHONPATH=. poetry run pytest tests
@@ -83,18 +101,7 @@ install-cuda:
 
 .PHONY: build run push compile
 
-########################################################################################################################
-# Local development
-########################################################################################################################
 
-add-dependencies:
-	poetry add $(shell cat requirements.in)
-
-install-dependencies:
-	poetry install
-
-run-local:
-	poetry run uvicorn app.main:app --reload --host 127.0.0.1 --port 8080
 
 compile:
 	pip-compile requirements.in --upgrade
@@ -114,7 +121,7 @@ build:
 	docker build -t do360now/semiconductor:${VERSION} .
 
 run:
-	docker run --rm --name semiconductor-overview -p 8000:80 do360now/semiconductor:${VERSION}
+	docker run --rm --name semiconductor-overview -p 8000:8000 do360now/semiconductor:${VERSION}
 
 push:
 	docker push do360now/semiconductor:${VERSION}
