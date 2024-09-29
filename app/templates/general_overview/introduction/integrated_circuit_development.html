@@ -9,20 +9,35 @@
 </head>
 <body>
     <div class="container">
-        <div class="sidebar">
-            <h2>INTRODUCTION</h2>
-        </div>
-
-        <div class="main-content">
-            <div class="grey-buttons">
-                <h2>Integrated Circuit Development</h2>
+        <header class="sidebar">
+            <h2>Integrated Circuit Development</h2>
+        </header>
+        
+        <div>
+        <main class="main-content">
+            <article class="grey-buttons">
                 <p>Since its invention in the 1960s, the integrated circuit (IC) has become ever more complex. Currently, ICs are designated as one of four classes based on the number of logic gate equivalents per chip. These are:</p>
-                <ul class="menu-buttons">
-                    <li><a href="/general_overview/introduction/small_scale_devices"><button>Small-scale integration (SSI) chips contain up to 100 transistors.</button></a></li>
-                    <li><a href="/general_overview/introduction/medium_scale_devices"><button>Medium-scale integration (MSI) chips contain up to 1,000 transistors.</button></a></li>
-                    <li><a href="/general_overview/introduction/large_scale_devices"><button>Large Scale Devices: Represent more advanced ICs with a higher transistor count.</button></a></li>
-                    <li><a href="/general_overview/introduction/very_large_scale_devices"><button>Very Large Scale Devices: Include even more transistors, with greater complexity.</button></a></li>
-                    <li><a href="/general_overview/introduction/ultra_large_scale_devices"><button>Ultra Large Scale Devices: Contain millions of transistors and are used in highly advanced applications.</button></a></li>
+                <ul>
+                    <li>
+                        <a href="/general_overview/introduction/small_scale_devices" class="button">Small-scale integration (SSI):</a>
+                        <p>Chips contain up to 100 transistors.</p>
+                    </li>
+                    <li>
+                        <a href="/general_overview/introduction/medium_scale_devices" class="button">Medium-scale integration (MSI):</a>
+                        <p>Chips contain up to 1000 transistors.</p>
+                    </li>
+                    <li>
+                        <a href="/general_overview/introduction/large_scale_devices" class="button">Large Scale Devices (LSI):</a>
+                        <p>Chips contain up to 10,000 transistors. Represent more advanced ICs with a higher transistor count.</p>
+                    </li>
+                    <li>
+                        <a href="/general_overview/introduction/very_large_scale_devices" class="button">Very Large Scale Devices (VLSI):</a>
+                        <p>Chips contain up to 100,000 transistors. Used in highly advanced applications.</p>
+                    </li>
+                    <li>
+                        <a href="/general_overview/introduction/ultra_large_scale_devices" class="button">Ultra Large Scale Devices (ULSI):</a>
+                        <p>Chips contain up to 1,000,000 transistors. Used in the most advanced applications. </p>
+                    </li>
                 </ul>
 
                 <p>As a family, integrated circuits can be found in most electronic devices, from those as simple as a garage door opener to the most complex computers.</p>
@@ -47,20 +62,32 @@
             <div class="image-section">
                 <h2>Integrated Circuit Development</h2>
                 <div class="image-container">
-                    <img src="/images/ssi.png" alt="Integrated Circuit" id="icImage">
+                    <img src="/images/ssi.png" alt="Small Scale Integrated Circuit" id="icImage">
                 </div>
                 <div class="controls">
-                    <button id="prevButton">&lt; Prev</button>
-                    <button id="nextButton">Next &gt;</button>
+                    <button id="prevButton" aria-label="Previous Image">&lt; Prev</button>
+                    <button id="nextButton" aria-label="Next Image">Next &gt;</button>
                 </div>
             </div>
 
             <script>
                 const icImages = [
-                    "/images/ssi.png", // Small Scale Integration
-                    "/images/msi.png", // Medium Scale Integration
-                    "/images/VLSI.png", // Very Large Scale Integration
-                    "/images/ULSI.png"  // Ultra Large Scale Integration
+                    {
+                        src: "/images/ssi.png",
+                        alt: "Small Scale Integrated Circuit"
+                    },
+                    {
+                        src: "/images/msi.png",
+                        alt: "Medium Scale Integrated Circuit"
+                    },
+                    {
+                        src: "/images/VLSI.png",
+                        alt: "Very Large Scale Integrated Circuit"
+                    },
+                    {
+                        src: "/images/ULSI.png",
+                        alt: "Ultra Large Scale Integrated Circuit"
+                    }
                 ];
                 let currentIndex = 0;
 
@@ -69,7 +96,8 @@
                 const nextButton = document.getElementById('nextButton');
 
                 function updateImage() {
-                    icImageElement.src = icImages[currentIndex];
+                    icImageElement.src = icImages[currentIndex].src;
+                    icImageElement.alt = icImages[currentIndex].alt;
                     prevButton.disabled = currentIndex === 0;
                     nextButton.disabled = currentIndex === icImages.length - 1;
                 }
@@ -94,10 +122,63 @@
 
             <div class="footer">
                 <a href="/general_overview/introduction"><button>Back</button></a>
-                <a href="/glossary"><button>Glossary</button></a>
-                <div class="page-number">Page 11 of 16</div>
-                <a href="/"><button>Home</button></a>
+                <a href="#" id="openModal"><button>Next</button></a>
+           
             </div>
+
+            <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>You have reached the end of the chapter.<br>*** Please select from the following options ***</p>
+        <a href="/general_overview/introduction/chapter_review_introduction"><button>Take Chapter Review Quiz</button></a>
+        <a href="/general_overview/measurements"><button>Go To Next Chapter in this Course</button></a>
+        <a href="/general_overview/introduction"><button>Go To Index for This Chapter</button></a>
+        <a href="/general_overview"><button>Go To Table of Contents for This Course</button></a>
+        <a href="/"><button>Go To Main Menu</button></a>
+        <button>CANCEL</button>
+        </div>
+    </div>
+
+  <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the link that opens the modal
+      var link = document.getElementById("openModal");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on the link, open the modal
+      link.onclick = function() {
+          modal.style.display = "block";
+          return false; // Prevent default action of the link
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+
+      // Close the modal when any button is clicked
+      var buttons = document.querySelectorAll('.modal-content button');
+      buttons.forEach(function(button) {
+          button.onclick = function() {
+              modal.style.display = "none";
+          }
+      });
+  </script>
+
         </div>
     </div>
 </body>
