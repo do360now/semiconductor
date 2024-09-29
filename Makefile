@@ -46,7 +46,37 @@ format:
 mypy:
 	poetry run mypy app
 
-check:
+# Compile requirements
+compile:
+	pip-compile requirements.in --upgrade
+
+# Pre-installation steps for Docker
+pre-docker-install:
+	sudo apt update && sudo apt upgrade -y
+	sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+	echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Install Docker
+docker-install:
+	sudo apt update
+	sudo apt install -y docker-ce docker-ce-cli containerd.io
+
+# Build Docker image
+build:
+	docker build -t do360now/semiconductor:${VERSION} .
+
+# Run Docker container
+run:
+	docker run --rm --name semiconductor-overview -p 8000:80 do360now/semiconductor:${VERSION}
+
+# Push Docker image to repository
+push:
+	docker push do360now/semiconductor:${VERSION}
+
+# Install CUDA if the script exists
+install-cuda:
+	if [ -f ./install-cuda.sh ]; then ./install-cuda.sh; else echo "CUDA install script not found."; ficheck:
 	make format
 	make mypy
 
