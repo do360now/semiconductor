@@ -1,4 +1,32 @@
+# Ignore environment variable files, typically used for storing sensitive information
+# such as API keys, credentials, etc.
 .env
+
+# Ignore virtual environment directory
+# This is where your local Python virtual environment is created, and it's specific to your local machine.
 .venv
+
+# Ignore the data directory
+# This could be where raw or processed data is stored. Typically, data files are large or sensitive 
+# and should not be part of version control.
 data/
+
+# Ignore the node_modules directory
+# If you're using Node.js alongside Python, this directory contains installed packages 
+# from npm, and these should not be committed as they can be easily reinstalled.
 node_modules/
+
+# Ignore __pycache__ directories
+# Python automatically generates these directories to store compiled bytecode files (.pyc).
+__pycache__/
+
+# Ignore Python bytecode files
+# These are compiled Python files that Python uses to run programs more efficiently.
+# It's best to ignore them as they can vary between systems and are auto-generated.
+*.py[cod]
+
+# Ignore any .pyo or .pyd files
+# .pyo files are created when Python code is compiled in optimized mode.
+# .pyd files are used in Windows for compiled Python extensions.
+*.pyo
+*.pyd
