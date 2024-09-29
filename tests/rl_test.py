@@ -1,59 +1,60 @@
 from selenium import webdriver
+from selenium.webdriver.edge.service import Service as EdgeService
+from selenium.webdriver.edge.options import Options
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
-import time
 
-# Set up Chrome options (you can adjust if needed)
-chrome_options = Options()
-chrome_options.add_argument("--headless")  # Run headless if you don't want the browser UI to show
-chrome_options.add_argument("--ignore-certificate-errors")  # Ignore SSL certificate errors for local development
-chrome_options.add_argument("--disable-web-security")
+# Set up Edge options
+edge_options = Options()
+edge_options.add_argument("--headless")  # Run Edge headless if you don't want the browser UI
+edge_options.add_argument("--ignore-certificate-errors")
+edge_options.add_argument("--disable-web-security")
 
-# Path to ChromeDriver (adjust this if necessary)
-service = Service(executable_path='/path/to/chromedriver')  # Replace with your ChromeDriver path
+# Initialize the WebDriver for Edge
+driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()), options=edge_options)
+
 
 # Initialize the WebDriver
-driver = webdriver.Chrome(service=service, options=chrome_options)
 
 try:
-    # Navigate to the index page of the web app
-    driver.get("http://127.0.0.1:8000")  # Assuming you're running the app locally
-
-    # Wait for the page to load
-    time.sleep(2)  # Consider using WebDriverWait for a more reliable wait
+    # Navigate to the index page
+    driver.get("http://127.0.0.1:8000")
     
-    # Verify that the page title is correct
-    assert "Semiconductor Processing Overview" in driver.title
+    # Verify the page title
+    assert "Semiconductor Processing Overview" in driver.title, "Page title does not match"
     print("Page title is correct")
 
-    # Verify that the 'Start Learning' button is present and clickable
-    start_button = driver.find_element(By.LINK_TEXT, "Start Learning")
-    assert start_button is not None
-    print("Start Learning button is found")
-
-    # Click the 'Start Learning' button
+    # Wait for the 'Start Learning' button to be clickable and click it
+    start_button = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.LINK_TEXT, "Start Learning"))
+    )
     start_button.click()
 
-    # Wait for the next page to load (use WebDriverWait in production for more accuracy)
-    time.sleep(2)
-
-    # Verify the current URL is for the general overview
-    assert "/general_overview" in driver.current_url
+    # Wait for the General Overview page to load
+    WebDriverWait(driver, 10).until(
+        EC.url_contains("/general_overview")
+    )
     print("Successfully navigated to the General Overview page")
 
-    # Now navigate to the About SPO page
+    # Navigate to the About SPO page
     driver.get("http://127.0.0.1:8000/about_spo")
 
-    # Verify that the About SPO page loaded correctly
-    about_title = driver.find_element(By.TAG_NAME, "h1").text
-    assert "About" in about_title
+    # Verify that the About SPO page loaded
+    about_title = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.TAG_NAME, "h1"))
+    ).text
+    assert "About" in about_title, "About page title does not match"
     print("About SPO page loaded successfully")
 
-    # Check for version information in the footer (optional)
-    version_info = driver.find_element(By.TAG_NAME, "footer").text
+    # Check for version information in the footer
+    footer = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.TAG_NAME, "footer"))
+    )
+    version_info = footer.text
     print(f"Version information found: {version_info}")
 
 finally:
-    # Close the browser after the tests
+    # Close the browser after tests
     driver.quit()
