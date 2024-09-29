@@ -47,20 +47,32 @@
             <div class="image-section">
                 <h2>Integrated Circuit Development</h2>
                 <div class="image-container">
-                    <img src="/images/ssi.png" alt="Integrated Circuit" id="icImage">
+                    <img src="/images/ssi.png" alt="Small Scale Integrated Circuit" id="icImage">
                 </div>
                 <div class="controls">
-                    <button id="prevButton">&lt; Prev</button>
-                    <button id="nextButton">Next &gt;</button>
+                    <button id="prevButton" aria-label="Previous Image">&lt; Prev</button>
+                    <button id="nextButton" aria-label="Next Image">Next &gt;</button>
                 </div>
             </div>
 
             <script>
                 const icImages = [
-                    "/images/ssi.png", // Small Scale Integration
-                    "/images/msi.png", // Medium Scale Integration
-                    "/images/VLSI.png", // Very Large Scale Integration
-                    "/images/ULSI.png"  // Ultra Large Scale Integration
+                    {
+                        src: "/images/ssi.png",
+                        alt: "Small Scale Integrated Circuit"
+                    },
+                    {
+                        src: "/images/msi.png",
+                        alt: "Medium Scale Integrated Circuit"
+                    },
+                    {
+                        src: "/images/VLSI.png",
+                        alt: "Very Large Scale Integrated Circuit"
+                    },
+                    {
+                        src: "/images/ULSI.png",
+                        alt: "Ultra Large Scale Integrated Circuit"
+                    }
                 ];
                 let currentIndex = 0;
 
@@ -69,7 +81,8 @@
                 const nextButton = document.getElementById('nextButton');
 
                 function updateImage() {
-                    icImageElement.src = icImages[currentIndex];
+                    icImageElement.src = icImages[currentIndex].src;
+                    icImageElement.alt = icImages[currentIndex].alt;
                     prevButton.disabled = currentIndex === 0;
                     nextButton.disabled = currentIndex === icImages.length - 1;
                 }
