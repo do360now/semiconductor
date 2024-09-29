@@ -1,3 +1,17 @@
+## [1.7.1](https://github.com/do360now/semiconductor/compare/v1.7.0...v1.7.1) (2024-09-29)
+
+
+### Bug Fixes
+
+* deployment ([3cd7f29](https://github.com/do360now/semiconductor/commit/3cd7f293169325ec22f352aaa4da120b77d3aca8))
+
+# [1.7.0](https://github.com/do360now/semiconductor/compare/v1.6.0...v1.7.0) (2024-09-29)
+
+
+### Features
+
+* add url tests ([609b1f2](https://github.com/do360now/semiconductor/commit/609b1f21a7b3cf41e31db363834f961ec3d858ee))
+
 # [1.6.0](https://github.com/do360now/semiconductor/compare/v1.5.0...v1.6.0) (2024-09-24)
 
 

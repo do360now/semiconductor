@@ -3,9 +3,14 @@
 
 **Semiconductor Processing Overview (SPO)** is a comprehensive online course designed to provide learners with an in-depth understanding of the semiconductor manufacturing process. This course covers everything from the basic principles of semiconductor materials to the advanced techniques used in modern device fabrication.
 
-## Mission
+## Course Structure
 
-The mission, if you accept it, is to equip students, professionals, and enthusiasts with the knowledge and skills necessary to excel in the semiconductor industry. Whether you are new to the field or looking to deepen your expertise, SPO offers valuable insights into the world of semiconductor technology.
+The course is divided into several modules, each focusing on a specific aspect of semiconductor processing:
+
+- **General Overview:** Introduction to semiconductor basics and industry applications.
+- **Technical Overview:** Detailed exploration of fabrication processes, materials, and device technology.
+
+The mission, if you choose to accept it, is to equip students, professionals, and enthusiasts with the knowledge and skills necessary to excel in the semiconductor industry. Whether you are new to the field or looking to deepen your expertise, SPO offers valuable insights into the world of semiconductor technology.
 
 ## Contribute
 
@@ -29,7 +34,6 @@ If you find this course valuable and would like to support this effort, consider
 
 **Bitcoin Address:** `1BDhXcY9brMprLT7KCWnmjSPPCfifNz5kC`
 
-
 ## Course Structure
 
 The course is divided into several modules, each focusing on a specific aspect of semiconductor processing:
@@ -44,21 +48,18 @@ This course is ideal for engineers, students, and professionals in the electroni
 
 ## Get Started
 
-Ready to dive into the world of semiconductor processing? Begin your learning journey by exploring our [General Overview](/general_overview) module or [Technical Overview](/technical_overview) module.
+Ready to dive into the world of semiconductor processing? Begin your learning journey by exploring our [General Overview](https://semiconductoreducation.com/general_overview/) module or [Technical Overview](https://semiconductoreducation.com/general_overview/introduction) module.
 
 ## Commit Message Format
 For semantic-release to work correctly, commit messages need to follow the Conventional Commits format. Here are a few examples of valid commit messages:
 
 - fix: Fixes a bug (will result in a patch version bump)
-- Example: fix: correct minor typos in code
+    - Example: `fix: correct minor typos in code`
 - feat: Adds a new feature (will result in a minor version bump)
-- Example: feat: add user authentication
+    - Example: `feat: add user authentication`
 - BREAKING CHANGE: Introduces a breaking change (will result in a major version bump)
-Example:
-
-`feat: refactor authentication logic`
-
-`BREAKING CHANGE: The login API now requires an email instead of username`
+    - Example: `feat: refactor authentication logic`  
+                `BREAKING CHANGE: The login API now requires an email instead of username`
 
 ---
 
