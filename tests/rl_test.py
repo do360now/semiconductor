@@ -15,7 +15,6 @@ edge_options.add_argument("--disable-web-security")
 # Initialize the WebDriver for Edge
 driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()), options=edge_options)
 
-
 # Initialize the WebDriver
 
 try:
@@ -49,11 +48,20 @@ try:
     print("About SPO page loaded successfully")
 
     # Check for version information in the footer
+    driver.get("http://127.0.0.1:8000")
+    
     footer = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.TAG_NAME, "footer"))
     )
-    version_info = footer.text
-    print(f"Version information found: {version_info}")
+
+    # Find the second <p> element within the footer, which contains the version information
+    version_paragraphs = footer.find_elements(By.TAG_NAME, "h5")
+    if len(version_paragraphs) > 1:
+        version_info = version_paragraphs[1].text  # Extract the text from the second <p> element
+        print(f"Version information found: {version_info}")
+    else:
+        print("Version information not found.")
+
 
 finally:
     # Close the browser after tests
