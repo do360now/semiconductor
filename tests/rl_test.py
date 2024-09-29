@@ -50,7 +50,7 @@ try:
 
     # Check for version information in the footer
     footer = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.TAG_NAME, "version"))
+        EC.presence_of_element_located((By.TAG_NAME, "footer"))
     )
     version_info = footer.text
     print(f"Version information found: {version_info}")
