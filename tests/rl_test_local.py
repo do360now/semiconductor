@@ -19,7 +19,7 @@ driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install(
 
 try:
     # Navigate to the index page
-    driver.get("https://semiconductoreducation.com/")
+    driver.get("http://127.0.0.1:8000")
     
     # Verify the page title
     assert "Semiconductor Processing Overview" in driver.title, "Page title does not match"
@@ -38,7 +38,7 @@ try:
     print("Successfully navigated to the General Overview page")
 
     # Navigate to the About SPO page
-    driver.get("https://semiconductoreducation.com//about_spo")
+    driver.get("http://127.0.0.1:8000/about_spo")
 
     # Verify that the About SPO page loaded
     about_title = WebDriverWait(driver, 10).until(
@@ -48,7 +48,7 @@ try:
     print("About SPO page loaded successfully")
 
     # Check for version information in the footer
-    driver.get("https://semiconductoreducation.com/")
+    driver.get("http://127.0.0.1:8000")
 
     footer = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.TAG_NAME, "footer"))
